@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name='robots' content='noindex, nofollow' />
-	<title>Projects</title>
+	<title>Cluster Analysis</title>
 	<link crossorigin='anonymous' href='https://d33wubrfki0l68.cloudfront.net/css/ca3c8e6914b82dc981854fe79d270054fabfcc24/css/bootstrap-with-override.css' rel='stylesheet'/>
 </head>
       <nav class="navbar navbar navbar-expand-sm bg-light navbar-light">
@@ -76,37 +76,53 @@
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=441573105970839&amp;ev=PageView&amp;noscript=1"></noscript>
 <div class="container mt-3">	
 <h1>
-  Projects
+  Cluster Analysis
   </h1>
   <br>
-<span style="color: #000000;">Here are some samples of my work (click on the links):</span><br style="color: #000000;" /><br>
-<span style="color: #000000;"><a href="graph.html"><u>Plotly Dashboard</u></a></span>
+<span style="color: #000000;">I will show how we can use retail transaction data to identify customer types</span><br style="color: #000000;" /><br>
+The dataset used for this analysis is a publicly shared dataset from <a href="https://www.kaggle.com/competitions/walmart-recruiting-trip-type-classification">Walmart</a>
     <br>
-    <img src="graph_screenshot.png" alt="Plotly Graph" width="303" height="212"><br>
-    This is an example of a dashboard I built using Plotly to help monitor the performance of the News Harvesting System while I was at Morningstar.
-	<br> This helped management monitor workload as a spike in articles within a industry would result in a spike in workload for one of their team members.
-    <br><br><br>
-<span style="color: #000000;"><a href="pickleball.html"><u>Web Scraper</u></a></span>
- <br>
-    On the Toronto Parks and Recs website, each community center posts the weekly drop in schedule.
-    <img src="pickleball.png" alt="Demo" width="500" height="370"><br>
-    Since there is no page on the parks and recs website that consolidates this information, I built
-    <br>a scraper to do just that.
-  <br><br><br>
-<br>
-<span style="color: #000000;"><a href="https://www.kaggle.com/code/hbao12/llm-filtering-example"><u>LLM filter</u></a></span>
- <br>
-    <img src="kaggle.png" alt="Demo" width="500" height="350"><br>
-    This is an example of how I used Gemini to filter articles based on companies mentioned.
-    Adding a filter using an LLM helped reduce workload by approximately 25% daily.
-  <br><br><br>
-    <br>
-<span style="color: #000000;"><a href="cluster.html"><u>Cluster Analysis</u></a></span>
- <br>
-    <img src="cluster0_byday.png" alt="Demo"<br><br>
-    This is an example of how I used a Walmart dataset to identify different customer types<br>
-    by applying the K-Means cluster algorithm.
-  <br><br><br>
+    <img src="data_definitions.png" alt="Data"><br>
+    <img src="data_sample.png" alt="Data"><br>
+    These are the first 5 rows of the dataset. The dataset itself contains 647,054 rows.<br><br>
+    <img src="by_dept.png" alt="Data"><br>
+    This is a graph of items purchased by Department. Not surprising that grocery items are the most common purchase at Walmart.
+	<br><br>
+    <img src="by_weekday.png" alt="Data"><br>
+    Again, we are not surprised to see that most customers go to Walmart on Fri/Sat/Sun.
+    <br><br>
+    <img src="unique_upc_per_visit.png" alt="Data"><br>
+    Knowing all of this, let's try and apply cluster analysis to see if we can create different customer profiles.
+    <br><br>
+    <img src="kmeans.png" alt="Data"><br>
+    Applying K-Means, we can see that there should be 3 clusters.
+    <br><br>
+    <img src="cluster0_byday.png" alt="Data"><br>
+    <img src="cluster1_byday.png" alt="Data"><br>
+    <img src="cluster2_byday.png" alt="Data"><br>
+    When we look at the different clusters, we can see some differences. Cluster 0 has a similar breakdown to that of
+    the overall breakdown of customers by day. However, we can see that for Cluster 1, these customers are more indifferent
+    to the day of the week. For Cluster 2, we can see that these customers have a much strong preference for Sunday and less so
+    on the weekend.
+    <img src="cluster0_byitem.png" alt="Data"><br>
+    <img src="cluster1_byitem.png" alt="Data"><br>
+    <img src="cluster2_byitem.png" alt="Data"><br>
+    The real differences start to show when we look at the number of items purchased by customers in the different clusters.
+    Cluster 1 has a very low item count, whereas Cluster 2 has a very high item count. Since Cluster 0 falls in between,<br>
+    I would label Cluster 0 as average.
+    <img src="cluster0_bydept.png" alt="Data"><br>
+    <img src="cluster1_bydept.png" alt="Data"><br>
+    <img src="cluster2_bydept.png" alt="Data"><br>
+    For the most part, Cluster 0 and Cluster 2 have very similar purchases by department. Cluster 1 has a strong preference
+    for Impulse Merchandise and Mens Wear when compared to the other clusters.<br>
+    <img src="totalvisits.png" alt="Data"><br>
+    To summarize:<br>
+    Cluster 1: Biggest group of customers. These customers come in and purchase anywhere between 1-10 items and have a stronger preference for<br>
+    Impulse Merchandise and Men's wear compared to the other clusters.<br>
+    Cluster 0: Second biggest group of customers. These are your average customers. They come in and purchase anywhere between<br>
+    16-30 items with no big preference when it comes to items.<br>
+    Cluster 2: Smallest group of customers. Similar to Cluster 0 except that they have a strong preference to shop on the weekends<br>
+    and they purchase more items per visit.<br>
 </div>
 <br>
 
