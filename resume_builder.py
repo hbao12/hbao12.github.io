@@ -2,7 +2,7 @@ from docx import Document
 from docx.enum.text import WD_BREAK
 from google import genai
 from dotenv import load_dotenv
-import mammoth
+from bs4 import BeautifulSoup
 import os
 from docx_parser_converter import docx_to_html
 
@@ -69,6 +69,8 @@ def create_resume(filename, description):
         document.save('resume_edited.docx')
 
         html_content = docx_to_html("resume_edited.docx").replace("font-size: 9pt","font-size: 14pt").replace("font-size: 11pt", "font-size: 14pt").replace("font-size: 10pt", "font-size:16pt").replace("body { padding: 14pt 36pt 17pt 36pt; }","body { padding: 14pt 36pt 17pt 36pt; margin-left: 0; width: 50% }")
+        soup = BeautifulSoup(html_content, "html.parser")
+        html_content = soup.prettify()
         with open("resume.html", "w", encoding='utf-8') as file:
             file.write(html_content)
     except Exception as error:
@@ -77,4 +79,4 @@ def create_resume(filename, description):
 
 # Example usage:
 file_path = "Resume_ATSF.docx"
-create_resume(file_path, None)
+print(create_resume(file_path, None))
