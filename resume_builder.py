@@ -1,5 +1,4 @@
 from docx import Document
-from docx.enum.text import WD_BREAK
 from google import genai
 from dotenv import load_dotenv
 from bs4 import BeautifulSoup
