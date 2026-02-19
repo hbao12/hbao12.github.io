@@ -77,4 +77,4 @@ def create_resume(filename, description):
 
 # Example usage:
 file_path = "Resume_ATSF.docx"
-print(create_resume(file_path, job_description))
+create_resume(file_path, None)
