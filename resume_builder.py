@@ -127,84 +127,51 @@ def main(company_name=None, company_address=None, company_code=None, job_descrip
 
 if __name__ == "__main__":
     job_description = """
-Job Title: Senior Data Scientist 
+Job Title: Python Developer
     
-Current Need:
+We are seeking a Python Developer to join a diverse team and help build the next generation of Pricing tools that will redefine the way Aviva commercial underwriters interact with customers, brokers, and vendors.
 
-The Senior Data Scientist (DS) will lead the development of advanced analytics and AI solutions that enhance decision intelligence, operational efficiency, and risk management across Oncology & Multispecialty (O&M) Finance. The Sr DS is the core model builder and analytical executor, turning prioritized use cases into working models and insights. This role balances deep technical work with business context, and is critical to delivering fast, credible results.
+Aviva Canada recently purchased new Pricing tool, namely Hyperexponential to help build, deploy, and refine pricing models at ease. The platform is native Python and developers can deploy in few clicks raters to production. You will actively develop numerous but uniquely designed HX products for our 20+ commercial lines of businesses within the Global Corporate and Specialty (GCS) space. We aim to onboard all GCS lines of businesses onto the platform within a 2-year timeframe.
 
-Key Responsibilities:
+You will work closely with other python developers, data scientists, and pricing actuaries to bring to life HX products embedding pricing models to market. You will also work with other stakeholders on the business front such as commercial underwriters to gather requirements for each rater. In addition, you will interact with IT professionals to integrate HX products to other technologies within the pricing ecosystem using APIs and micro services capability.
 
-Advanced Analytics and AI Execution
+What you’ll do: 
+Develop and maintain HX pricing products and deploy into production in collaboration with other developers, business stakeholders and IT professionals.
 
-Help define and subsequently execute the approach for 1-2 O&M Finance use cases, e.g., Fraud & Risk Management, Financial Controller / Agentic AI, Forecasting, Collections Improvement Analytics
+Integrate HX products to the wider pricing ecosystem such as Policy Administrative System and Datalake using APIs and micro services.  
 
-Develop time series forecasting models (short-term, long-term, sparse data), anomaly detection models (transactions, journals, contracts, pricing), scenario modeling for finance decisions, document entity extraction, and agentic workflows
+Design, build, and maintain efficient, reusable, reliable and secure python codebase using TDD principles.
 
-Explore data products and other upstream sources, evaluate data readiness and quality issues, and engineer features from transactional, contract, and time‑series data
+Mentor development resources on design and code best practices, quality, performance, and security.
 
-Apply statistical rigor to validate accuracy improvements vs legacy methods
+Share best practices with team members and internal developer community as well as collaboration and stakeholder management with the broader team.
 
-Partner with ML engineering support to harden models for production, and help implement monitoring, drift detection, and retraining strategies
+Work in a team using Scrum, Kanban rituals with a passion for Agile methodology but the flexibility to think outside the scrum.
 
-Partner with the Technical Product Manager and Lead DS to define scope, success metrics, and solution iteration plans
+What you’ll bring:
+3+ years of experience in Python Development or software engineering.
 
-Ensure explainability and auditability for finance and SOX contexts where necessary
+Good grasp of software engineering practices such as code-reusability, modularity, etc.
 
-Stakeholder Engagement
+An educational background in computer science or engineering, math, statistics, physics, or a related field. A minimum of a BSc is required, Masters is preferred.
 
-Translate business requirements into technical models and logic
+Work collaboratively with other developers in a version control environment using Git practices and repository structure.
 
-Work directly with Finance SMEs to validate assumptions, interpret outputs, and refine models based on real world constraints
+Intuitive problem-solving and analytical skills
 
-Builds strong, trust-based relationships with stakeholders, including business units, data engineering, and executive leadership through high quality work
+Strong communication and collaboration skills.
 
-Understand and resolve issues that arise during UAT in a well-organized manner
-
-Communication and Documentation
-
-Communicate progress, risks, and dependencies to product leadership and seek leadership support where necessary
-
-Create and maintain product documentation, including technical specs, release notes, and user guides
-
-Minimum Requirement:
-
-Degree or equivalent and typically requires 7+ years of relevant experience
-
-Critical Skills
-
-7+ years of professional experience in progressively advancing data science and applied AI/ML roles
-
-Strong background in forecasting, classification, anomaly detection / risk modeling, statistical modeling
-
-Experience working with financial data (AR/AP, GL, contracts)
-
-Clearly demonstrated experience working with Python, SQL
-
-Solid understanding of modern digital architectures, APIs, cloud platforms, data ecosystems, and software development practices
-
-Comfortable explaining model outputs to non‑technical audiences
-
-Additional Skills:
-
-Demonstrated experience implementing Agent workflows and/or LLM-augmented analytics
-
-Experience supporting SOX, audit, or financial controls
-
-Prior work in healthcare, life sciences, or complex B2B finance
-
-Experience with Power BI or similar BI tools
-
-Exposure to ERP / finance systems (SAP, PeopleSoft, etc.)
+What makes you stand out:
+Proficiency with SQL, Datalake, Snowflake and AWS
 
     """
-    company_name = "McKesson (Canada)"
-    company_code = "MCK_SDS"
+    company_name = "Aviva Insurance (Canada)"
+    company_code = "AVIVA_PD"
     company_address = chat.send_message(
         f"Get the company address for the following company: {company_name}"
     ).text
-    #main(company_name, company_address, company_code, job_description)
-    main()
+    main(company_name, company_address, company_code, job_description)
+    #main()
 
 
 
