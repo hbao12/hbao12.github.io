@@ -170,8 +170,8 @@ Proficiency with SQL, Datalake, Snowflake and AWS
     company_address = chat.send_message(
         f"Get the company address for the following company: {company_name}"
     ).text
-    main(company_name, company_address, company_code, job_description)
-    #main()
+    #main(company_name, company_address, company_code, job_description)
+    main()
 
 
 
