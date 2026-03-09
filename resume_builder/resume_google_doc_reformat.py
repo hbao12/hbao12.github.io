@@ -13,5 +13,5 @@ prettified_html = soup.prettify()
 
 # write file
 
-with open("site_files/resume.html", "w") as file:
+with open("../site_files/resume.html", "w") as file:
     file.write(prettified_html)

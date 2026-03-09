@@ -114,7 +114,7 @@ def create_resume(filename, company_name=None, company_address=None, company_cod
         with open(f"resume/resume_{company_code}_{date_string}.html", "w", encoding="utf-8") as file:
             file.write(html_content)
     else:
-        with open(f"site_files/resume.html", "w", encoding="utf-8") as file:
+        with open(f"../site_files/resume.html", "w", encoding="utf-8") as file:
             file.write(html_content)
 
     # create pdf version of resume
