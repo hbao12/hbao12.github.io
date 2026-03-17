@@ -114,7 +114,7 @@ def create_resume(filename, company_name=None, company_address=None, company_cod
         with open(f"resume/resume_{company_code}_{date_string}.html", "w", encoding="utf-8") as file:
             file.write(html_content)
     else:
-        with open(f"../site_files/resume.html", "w", encoding="utf-8") as file:
+        with open(f"site_files/resume.html", "w", encoding="utf-8") as file:
             file.write(html_content)
 
     # create pdf version of resume
@@ -127,51 +127,49 @@ def main(company_name=None, company_address=None, company_code=None, job_descrip
 
 if __name__ == "__main__":
     job_description = """
-Job Title: Python Developer
+Job Title: Data Scientist
     
-We are seeking a Python Developer to join a diverse team and help build the next generation of Pricing tools that will redefine the way Aviva commercial underwriters interact with customers, brokers, and vendors.
+Job Description
+The Global Data Science group supports our bank and merchant partners by using our extraordinarily rich data sets that span more than 4 billion cards globally and captures more than 190 billion transactions in a single year. Our focus lies on building creative solutions that have an immediate impact on the business of our highly analytical partners. To support our rapidly growing scope of work capabilities at the intersection of data science, analytics and AI, we are looking for Senior Data Scientists who are passionate and leading team members and solving complex data problems using Visa rich dataset and technical toolkit. You will join one of the Data Science focus areas (e.g., merchants, issuers, enablers, fintechs) and have the opportunity to engage across the Data Science teams, providing broad exposure to Visa’s business.
 
-Aviva Canada recently purchased new Pricing tool, namely Hyperexponential to help build, deploy, and refine pricing models at ease. The platform is native Python and developers can deploy in few clicks raters to production. You will actively develop numerous but uniquely designed HX products for our 20+ commercial lines of businesses within the Global Corporate and Specialty (GCS) space. We aim to onboard all GCS lines of businesses onto the platform within a 2-year timeframe.
+Essential Functions:
 
-You will work closely with other python developers, data scientists, and pricing actuaries to bring to life HX products embedding pricing models to market. You will also work with other stakeholders on the business front such as commercial underwriters to gather requirements for each rater. In addition, you will interact with IT professionals to integrate HX products to other technologies within the pricing ecosystem using APIs and micro services capability.
+Use and build new predictive models to innovate and optimize customer experiences, revenue generation, data insights, advertising targeting and other business outcomes
+Be an out-of-the-box problem solver who is passionate about applying data science techniques and innovate thinking to our unique data to help our clients both innovate and solve the problems they face
+Leverage AI coding tools (e.g., GitHub Copilot, Claude Code, Cline, OpenAI Codex) to accelerate development
+Apply data science and GenAI techniques to analyze transaction data and deliver actionable client insights
+Build agentic AI systems with multi-step reasoning, tool use, and memory for complex payment decisioning workflows
+Work with your data science colleagues as well as other teams across Visa to guide the critical thinking for our clients by using the data and tools available to you
+Connect with clients as well as client teams regarding the results and strategic recommendations advised by your analyses
+Develop visualizations to make your sophisticated analyses accessible to a broad audience
+Find opportunities to craft products out of analyses that are suitable for multiple clients
+Work with partners throughout the organization to explore opportunities for using Visa data to drive business solutions
+This is a hybrid position. Expectation of days in office will be confirmed by your hiring manager.
 
-What you’ll do: 
-Develop and maintain HX pricing products and deploy into production in collaboration with other developers, business stakeholders and IT professionals.
+Qualifications
+Basic Qualifications:
 
-Integrate HX products to the wider pricing ecosystem such as Policy Administrative System and Datalake using APIs and micro services.  
+2 or more years of work experience with a Bachelor’s Degree or an Advanced Degree (e.g. Masters, MBA, JD, MD, or PhD)
 
-Design, build, and maintain efficient, reusable, reliable and secure python codebase using TDD principles.
+Preferred Qualifications:
 
-Mentor development resources on design and code best practices, quality, performance, and security.
-
-Share best practices with team members and internal developer community as well as collaboration and stakeholder management with the broader team.
-
-Work in a team using Scrum, Kanban rituals with a passion for Agile methodology but the flexibility to think outside the scrum.
-
-What you’ll bring:
-3+ years of experience in Python Development or software engineering.
-
-Good grasp of software engineering practices such as code-reusability, modularity, etc.
-
-An educational background in computer science or engineering, math, statistics, physics, or a related field. A minimum of a BSc is required, Masters is preferred.
-
-Work collaboratively with other developers in a version control environment using Git practices and repository structure.
-
-Intuitive problem-solving and analytical skills
-
-Strong communication and collaboration skills.
-
-What makes you stand out:
-Proficiency with SQL, Datalake, Snowflake and AWS
-
+3 or more years of work experience with a Bachelor’s Degree or more than 2 years of work experience with an Advanced Degree (e.g. Masters, MBA, JD, MD)
+2+ years’ experience in data-based decision-making or quantitative analysis, including exposure to LLMs and GenAI applications
+Bachelor’s degree in an analytical field such as statistics, operations research, economics, computer science or many others (graduate degree is a plus)
+Experience in understanding and analyzing data using Python or Other statistical software
+Experience with extracting and aggregating data from large data sets using SQL, Hive, Spark or other tools
+Experience and comfort with machine learning techniques and accompanying packages.
+Experience with LLM orchestration frameworks (LangChain or similar), vector databases, and embedding models
+Competence in Excel, PowerPoint and Tableau
+Previous exposure to financial services, credit cards or merchant analytics is a plus, but not required
     """
-    company_name = "Aviva Insurance (Canada)"
-    company_code = "AVIVA_PD"
+    company_name = "VISA (Canada)"
+    company_code = "VISA_DS"
     company_address = chat.send_message(
         f"Get the company address for the following company: {company_name}"
     ).text
-    #main(company_name, company_address, company_code, job_description)
-    main()
+    main(company_name, company_address, company_code, job_description)
+    #main()
 
 
 
