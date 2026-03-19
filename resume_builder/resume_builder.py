@@ -129,42 +129,48 @@ if __name__ == "__main__":
     job_description = """
 Job Title: Data Scientist
     
-Job Description
-The Global Data Science group supports our bank and merchant partners by using our extraordinarily rich data sets that span more than 4 billion cards globally and captures more than 190 billion transactions in a single year. Our focus lies on building creative solutions that have an immediate impact on the business of our highly analytical partners. To support our rapidly growing scope of work capabilities at the intersection of data science, analytics and AI, we are looking for Senior Data Scientists who are passionate and leading team members and solving complex data problems using Visa rich dataset and technical toolkit. You will join one of the Data Science focus areas (e.g., merchants, issuers, enablers, fintechs) and have the opportunity to engage across the Data Science teams, providing broad exposure to Visa’s business.
+What You’ll Do:
 
-Essential Functions:
+Support the development of machine learning models for offer personalization, customer propensity, next-best-product, and related use cases.
 
-Use and build new predictive models to innovate and optimize customer experiences, revenue generation, data insights, advertising targeting and other business outcomes
-Be an out-of-the-box problem solver who is passionate about applying data science techniques and innovate thinking to our unique data to help our clients both innovate and solve the problems they face
-Leverage AI coding tools (e.g., GitHub Copilot, Claude Code, Cline, OpenAI Codex) to accelerate development
-Apply data science and GenAI techniques to analyze transaction data and deliver actionable client insights
-Build agentic AI systems with multi-step reasoning, tool use, and memory for complex payment decisioning workflows
-Work with your data science colleagues as well as other teams across Visa to guide the critical thinking for our clients by using the data and tools available to you
-Connect with clients as well as client teams regarding the results and strategic recommendations advised by your analyses
-Develop visualizations to make your sophisticated analyses accessible to a broad audience
-Find opportunities to craft products out of analyses that are suitable for multiple clients
-Work with partners throughout the organization to explore opportunities for using Visa data to drive business solutions
-This is a hybrid position. Expectation of days in office will be confirmed by your hiring manager.
+Explore, clean, and analyze large datasets to uncover insights and trends.
 
-Qualifications
-Basic Qualifications:
+Build prototypes, run experiments, and contribute to model evaluation and validation.
 
-2 or more years of work experience with a Bachelor’s Degree or an Advanced Degree (e.g. Masters, MBA, JD, MD, or PhD)
+Work with engineering teams to integrate models into production pipelines.
 
-Preferred Qualifications:
+Help maintain and optimize existing ML workflows (Airflow, Dataproc, on-prem clusters, or cloud platforms).
 
-3 or more years of work experience with a Bachelor’s Degree or more than 2 years of work experience with an Advanced Degree (e.g. Masters, MBA, JD, MD)
-2+ years’ experience in data-based decision-making or quantitative analysis, including exposure to LLMs and GenAI applications
-Bachelor’s degree in an analytical field such as statistics, operations research, economics, computer science or many others (graduate degree is a plus)
-Experience in understanding and analyzing data using Python or Other statistical software
-Experience with extracting and aggregating data from large data sets using SQL, Hive, Spark or other tools
-Experience and comfort with machine learning techniques and accompanying packages.
-Experience with LLM orchestration frameworks (LangChain or similar), vector databases, and embedding models
-Competence in Excel, PowerPoint and Tableau
-Previous exposure to financial services, credit cards or merchant analytics is a plus, but not required
+Build dashboards and reports that communicate findings to business partners.
+
+Participate in code reviews and follow team best practices.
+
+What You Bring:
+
+2+ years of experience in data science or applied machine learning.
+
+Strong Python skills with exposure to ML libraries (e.g., scikit-learn, XGBoost, LightGBM).
+
+Solid SQL skills and comfort working with large datasets.
+
+Understanding of core ML concepts: regression, classification, validation, feature engineering.
+
+Curiosity, problem-solving ability, and willingness to learn deeper modeling and production skills.
+
+Ability to communicate analytical findings clearly and concisely.
+
+Exposure to recommendation systems or marketing analytics is an asset.
+
+Experience with A/B testing or experiment analysis is an asset..
+
+Familiarity with Airflow, Docker, cloud compute (GCP/Azure), or distributed systems is an asset.
+
+Knowledge of embeddings, uplift modeling, or personalization frameworks is an asset.
+
+
     """
-    company_name = "VISA (Canada)"
-    company_code = "VISA_DS"
+    company_name = "Canadian Tire"
+    company_code = "CTC_DS"
     company_address = chat.send_message(
         f"Get the company address for the following company: {company_name}"
     ).text
