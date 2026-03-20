@@ -15,8 +15,14 @@ import datetime
 import psycopg2
 from sqlalchemy import create_engine
 import time
+from git import Repo
+from pyvirtualdisplay import Display
 
 load_dotenv()
+
+# Start virtual display (so that the code can be run as a cronjob)
+display = Display(visible=0, size=(1920, 1080)) # Set visible=0 for true headless operation with display
+display.start()
 
 client = genai.Client(api_key=os.environ["GEMINI_KEY"])
 chat = client.chats.create(model="gemini-2.5-flash-lite-preview-09-2025")
@@ -136,3 +142,15 @@ with engine.connect() as sqlalc_conn:
 
     with open("/home/hai/PycharmProjects/hbao12.github.io/site_files/jobs.html", "w") as f:
         f.write(html_page)
+
+def git_push():
+
+    repo = Repo(r'/home/hai/PycharmProjects/hbao12.github.io')
+    repo.index.add(['site_files/jobs.html']) # Stages all modified/deleted files
+    repo.index.commit('Automated commit from Python script') # Commits the staged changes
+    origin = repo.remote(name='origin') # Gets the 'origin' remote
+    origin.push() # Pushes the committed changes
+    print('Code successfully pushed')
+
+git_push()
+display.stop()
