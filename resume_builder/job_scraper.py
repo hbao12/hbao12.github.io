@@ -119,14 +119,14 @@ driver.close()
 with engine.connect() as sqlalc_conn:
     query3 = f"SELECT comp_name, job_location, job_title, job_posting_url FROM job_bank ORDER BY job_id DESC LIMIT 100"
     df_jobs = pd.read_sql_query(query3, sqlalc_conn)
-    df_jobs['Link'] = df_jobs.apply(lambda x: f'<a href="{x["job_posting_url"]}">{x["job_title"]}</a>', axis=1)
+    df_jobs['link'] = df_jobs.apply(lambda x: f'<a href="{x["job_posting_url"]}">{x["job_title"]}</a>', axis=1)
     df_jobs = df_jobs.drop(columns=['job_title', 'job_posting_url'])
     html_table = df_jobs.to_html(escape=False)
     html_page = f"""
     <!DOCTYPE html>
     <html>
     <head>
-        <title>Pandas DataFrame to HTML</title>
+        <title>Job Bank</title>
         <style>
             table {{ border-collapse: collapse; width: 50%; }}
             th, td {{ border: 1px solid black; padding: 8px; text-align: left; }}
@@ -134,7 +134,10 @@ with engine.connect() as sqlalc_conn:
         </style>
     </head>
     <body>
-        <h2>My DataFrame Table</h2>
+        <h2>Job Bank Datframe</h2>
+        <p>This dataframe contains job posting data scraped through Selenium using cronjob.<br>
+        The HTML file is then pushed to Github pages using GitPython.<br>
+        This table only contains the last 100 entries.</p>
         {html_table}
     </body>
     </html>
