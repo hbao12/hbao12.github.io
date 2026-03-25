@@ -191,11 +191,11 @@ def git_push():
     origin.push()  # Pushes the committed changes
     logging.info('Code successfully pushed. Scrape completed.')
 
-
-logging.info("Job scrape start.")
-job_url_list, df_companies, cur, conn = db_connect()
-df_companies = df_companies.apply(lambda x: process_link(x.company_name, x.company_job_link_url, x.company_job_link_tag, job_url_list, cur, conn, x.dropdown_id, x.dropdown_value), axis=1)
-driver.close()
-build_job_html()
-git_push()
-display.stop()
+if __name__ == "__main__":
+    logging.info("Job scrape start.")
+    job_url_list, df_companies, cur, conn = db_connect()
+    df_companies = df_companies.apply(lambda x: process_link(x.company_name, x.company_job_link_url, x.company_job_link_tag, job_url_list, cur, conn, x.dropdown_id, x.dropdown_value), axis=1)
+    driver.close()
+    build_job_html()
+    git_push()
+    display.stop()
