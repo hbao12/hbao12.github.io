@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#ca98ff",
+                    "surface-container-high": "#1f1f23",
+                    "tertiary": "#ff8b9a",
+                    "surface-container": "#19191d",
+                    "primary-container": "#c185ff",
+                    "on-primary-fixed": "#000000",
+                    "on-secondary-fixed": "#540f72",
+                    "outline": "#767579",
+                    "primary-dim": "#9c42f4",
+                    "on-primary-container": "#350062",
+                    "secondary-fixed-dim": "#e9aeff",
+                    "primary-fixed": "#c185ff",
+                    "secondary-dim": "#d18aee",
+                    "surface-dim": "#0e0e11",
+                    "on-error-container": "#ffb2b9",
+                    "on-tertiary-container": "#4d0015",
+                    "background": "#0e0e11",
+                    "on-secondary-container": "#efc0ff",
+                    "error-dim": "#d73357",
+                    "error-container": "#a70138",
+                    "tertiary-dim": "#f47788",
+                    "outline-variant": "#48474b",
+                    "tertiary-fixed-dim": "#fa7c8d",
+                    "on-surface-variant": "#acaaae",
+                    "tertiary-fixed": "#ff909e",
+                    "surface-bright": "#2c2c30",
+                    "error": "#ff6e84",
+                    "inverse-surface": "#fcf8fd",
+                    "surface-container-lowest": "#000000",
+                    "primary-fixed-dim": "#b772ff",
+                    "on-secondary-fixed-variant": "#743391",
+                    "on-primary-fixed-variant": "#420078",
+                    "on-tertiary-fixed": "#39000e",
+                    "on-surface": "#f0edf1",
+                    "surface-variant": "#25252a",
+                    "surface-container-highest": "#25252a",
+                    "on-secondary": "#520c70",
+                    "tertiary-container": "#f7798b",
+                    "on-error": "#490013",
+                    "inverse-primary": "#8523dd",
+                    "secondary-container": "#692886",
+                    "on-tertiary": "#62041f",
+                    "surface-container-low": "#131316",
+                    "on-primary": "#46007d",
+                    "on-tertiary-fixed-variant": "#711229",
+                    "inverse-on-surface": "#555458",
+                    "surface": "#0e0e11",
+                    "primary": "#ca98ff",
+                    "secondary-fixed": "#f0c1ff",
+                    "on-background": "#f0edf1",
+                    "secondary": "#e097fd"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        background-color: #0e0e11;
+        color: #f0edf1;
+      }
+      .tonal-shift-bottom {
+        background: linear-gradient(to bottom, rgba(14,14,17,1) 0%, rgba(19,19,22,1) 100%);
+      }
+      .tonal-shift-top {
+        background: linear-gradient(to top, rgba(14,14,17,1) 0%, rgba(25,25,29,0.3) 100%);
+      }
+      .glass-card {
+        background: rgba(31, 31, 35, 0.6);
+        backdrop-filter: blur(20px);
+      }
+      .text-gradient {
+        background: linear-gradient(135deg, #ca98ff 0%, #8A2BE2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .primary-gradient-bg {
+        background: linear-gradient(135deg, #ca98ff 0%, #8A2BE2 100%);
+      }
+    </style>
+</head>
+<title>Hai Bao - Data Science Enthusiast</title>
+<body class="font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-zinc-950/60 backdrop-blur-xl shadow-[0px_20px_40px_rgba(0,0,0,0.4)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-2xl font-bold tracking-tighter text-zinc-100 font-headline">Data Science Enthusiast</div>
+<nav class="hidden md:flex items-center gap-10 font-headline tracking-tight">
+<a class="text-purple-400 font-bold border-b-2 border-purple-500 pb-1" href="projects.html">Projects</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors" href="resume.pdf">Resume</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors" href="#">About</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors" href="#">Archive</a>
+</nav>
+<button class="primary-gradient-bg text-on-primary-container font-headline font-bold px-6 py-2.5 rounded hover:scale-95 active:scale-90 transition-transform">
+                Let's Talk
+            </button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center max-w-7xl mx-auto px-8 py-24 overflow-hidden">
+<div class="grid grid-cols-12 gap-8 items-center w-full">
+<div class="col-span-12 md:col-span-7 z-10">
+<h1 class="font-headline font-extrabold text-7xl md:text-8xl leading-tight tracking-tighter mb-8">
+                        Greetings! <br/>
+<span class="text-gradient">Welcome to my personal website.</span>
+</h1>
+<p class="text-on-surface-variant text-xl max-w-xl font-body leading-relaxed mb-12">
+                        My name is Hai and I enjoy transforming data into business insights and solving business problems.
+                    </p>
+<div class="flex gap-6">
+<button class="primary-gradient-bg px-8 py-4 rounded text-on-primary-fixed font-bold tracking-wide flex items-center gap-2">
+                            Explore Work
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+<a href="resume.pdf"><button class="surface-container px-8 py-4 rounded text-on-surface font-bold tracking-wide hover:bg-surface-bright transition-colors">
+                            Download Resume
+</button></a>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5 relative mt-12 md:mt-0">
+<div class="relative z-10 glass-card p-4 rounded-xl rotate-3 hover:rotate-0 transition-transform duration-700">
+<img alt="Professional Data Scientist Portrait" class="rounded shadow-2xl w-full grayscale contrast-125 brightness-90" data-alt="Hai" src="img/hai.jpg"/>
+</div>
+<!-- Background ambient pulse -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary-dim/20 blur-[120px] rounded-full -z-10"></div>
+</div>
+</div>
+</section>
+<!-- Technical Command Center (Expertise) -->
+<section class="bg-surface-container-low py-32">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-20">
+<span class="text-primary font-headline tracking-[0.2em] text-xs font-bold uppercase mb-4 block">Engine Room</span>
+<h2 class="font-headline text-5xl font-extrabold tracking-tight">Technical Command Center</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Column 1 -->
+<div class="space-y-6">
+<div class="surface-container p-8 rounded-xl border-l-4 border-primary/40 hover:bg-surface-bright transition-colors group">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="terminal">terminal</span>
+<span class="text-xs font-label text-on-surface-variant font-bold tracking-widest uppercase">Language</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-3">Python Ecosystem</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">Mastery of Pandas, NumPy, and Scikit-learn for high-performance data manipulation and predictive modeling.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">NumPy</span>
+<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">Pandas</span>
+<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">Scikit-learn</span>
+</div>
+</div>
+<div class="surface-container p-8 rounded-xl border-l-4 border-primary/40 hover:bg-surface-bright transition-colors group">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="database">database</span>
+<span class="text-xs font-label text-on-surface-variant font-bold tracking-widest uppercase">Storage</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-3">Data Engineering &amp; SQL</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">Expert in PostgreSQL and BigQuery, optimizing complex queries for multi-terabyte datasets.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">PostgreSQL</span>
+<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">BigQuery</span>
+<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">dbt</span>
+</div>
+</div>
+</div>
+<!-- Column 2 -->
+<div class="space-y-6 md:mt-12">
+<div class="surface-container p-8 rounded-xl border-l-4 border-primary/40 hover:bg-surface-bright transition-colors group">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="neurology">neurology</span>
+<span class="text-xs font-label text-on-surface-variant font-bold tracking-widest uppercase">Deep Learning</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-3">TensorFlow &amp; PyTorch</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">Designing and deploying neural networks for computer vision and natural language processing tasks.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">CNNs</span>
+<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">Transformers</span>
+<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">Keras</span>
+</div>
+</div>
+<div class="surface-container p-8 rounded-xl border-l-4 border-primary/40 hover:bg-surface-bright transition-colors group">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="bar_chart">bar_chart</span>
+<span class="text-xs font-label text-on-surface-variant font-bold tracking-widest uppercase">Communication</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-3">Advanced Visualization</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">Translating raw metrics into interactive dashboards and executive-level visual storytelling.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">Tableau</span>
+<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">Plotly</span>
+<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">Matplotlib</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Curated Case Studies -->
+<section class="py-32">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex justify-between items-end mb-20">
+<div>
+<span class="text-primary font-headline tracking-[0.2em] text-xs font-bold uppercase mb-4 block">The Portfolio</span>
+<h2 class="font-headline text-5xl font-extrabold tracking-tight">Curated Case Studies</h2>
+</div>
+<a class="text-primary font-bold hover:underline underline-offset-8 transition-all" href="#">View Archive</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<!-- Project 1 -->
+<div class="group cursor-pointer">
+<div class="overflow-hidden rounded-xl aspect-[16/10] bg-surface-container-low mb-8 relative">
+<img alt="Financial forecasting data visualization" class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" data-alt="A sophisticated data visualization dashboard showing financial stock market trends with glowing purple line graphs on a dark digital interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp811OmRjaOTlEh-G4qsIsQRVQMVb5ClQDYmQpfSN-oXGRjUSeFf9HeNp0V0SzaKc7RylGept1SZC_9e_tzVtiaG-S9OFRn3ugfDUFKTeUPpBNNzMiztg16zWLFF15rKHwYmcNa4GDAn8NnnO4fXAN16UCcvzseVP1KtGt-_LDKN5S-W2703VjyIQIyV_3GFjFLyWrXD2K9Y3uZ6OdY_KGMDk6Wl0827ju8Ft5TXZIpGnZTBucDXwYBA5qcfgefiET1LdySVXBxCw"/>
+<div class="absolute bottom-6 left-6 flex gap-2">
+<span class="bg-black/80 backdrop-blur px-3 py-1 rounded text-[10px] uppercase font-bold tracking-widest text-primary">Neural Networks</span>
+</div>
+</div>
+<h3 class="text-3xl font-headline font-bold mb-4 group-hover:text-primary transition-colors">Project: Predictive Liquidity Mapping</h3>
+<p class="text-on-surface-variant leading-relaxed max-w-lg mb-6">Building a real-time risk assessment engine for high-frequency trading platforms using recurrent neural networks.</p>
+<div class="h-px w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+</div>
+<!-- Project 2 -->
+<div class="group cursor-pointer md:translate-y-24">
+<div class="overflow-hidden rounded-xl aspect-[16/10] bg-surface-container-low mb-8 relative">
+<img alt="Urban health analytics heatmap" class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" data-alt="Digital map of a city showing population density and healthcare accessibility through glowing hotspots and intricate network patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuz0IwnmgJU1fq7GjPpM3hJ8SwkpGQRHYTqH0G9GeqMz5OAbjijLDZp86EQoX5AfjZ2ciuV0qyAppyqt6LoZqQaRysAONzh0HjCmabmzXDSstOmRRq4znTZhV4cLefU2Qr8_NHAGK2kCG8WtfLORrcT06Te-3uyKMVOUHwYD3J4novjS0DScFzhwsCr86ofAPAJWIkURqEvhz66Z4MDEiXaeOnteQlVb9mBtAbh9TnIe8ShSzUbbmWlNOXnS9loZJA5kXKGkcZpxA"/>
+<div class="absolute bottom-6 left-6 flex gap-2">
+<span class="bg-black/80 backdrop-blur px-3 py-1 rounded text-[10px] uppercase font-bold tracking-widest text-primary">Geospatial AI</span>
+</div>
+</div>
+<h3 class="text-3xl font-headline font-bold mb-4 group-hover:text-primary transition-colors">Urban Health Distribution Models</h3>
+<p class="text-on-surface-variant leading-relaxed max-w-lg mb-6">Analyzing metropolitan healthcare accessibility through multi-layer geospatial data processing and demographic clustering.</p>
+<div class="h-px w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-7xl mx-auto px-8 my-40">
+<div class="primary-gradient-bg p-1 rounded-2xl">
+<div class="bg-background rounded-[calc(1rem-2px)] py-24 px-8 text-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full bg-primary/5 -z-10"></div>
+<div class="relative z-10">
+<h2 class="font-headline text-6xl font-extrabold tracking-tighter mb-8">Ready to Decode <br/> Your Data?</h2>
+<p class="text-on-surface-variant text-xl max-w-2xl mx-auto mb-12">
+                            Available for high-impact consultancy and leadership roles in data engineering and applied machine learning.
+                        </p>
+<button class="primary-gradient-bg px-10 py-5 rounded-full text-on-primary-fixed font-headline font-extrabold text-lg shadow-2xl hover:scale-105 transition-transform">
+                            Initiate Contact
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 mt-32 bg-zinc-950 tonal-shift-top bg-zinc-900/30">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-8">
+<div class="text-zinc-500 font-['Inter'] text-sm tracking-wide">
+                © 2026 Hai Bao - Data Science Enthusiast
+            </div>
+<div class="flex gap-12 font-['Inter'] text-sm tracking-wide">
+<a class="text-zinc-500 hover:text-purple-400 transition-colors opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="text-zinc-500 hover:text-purple-400 transition-colors opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="text-zinc-500 hover:text-purple-400 transition-colors opacity-80 hover:opacity-100" href="#">Kaggle</a>
+<a class="text-zinc-500 hover:text-purple-400 transition-colors opacity-80 hover:opacity-100" href="#">Email</a>
+</div>
+</div>
+</footer>
+</body></html>
