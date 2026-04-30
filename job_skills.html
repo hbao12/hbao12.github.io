@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Data Science Enthusiast | Blog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-container": "#f7798b",
+                      "error-dim": "#d73357",
+                      "surface-variant": "#25252a",
+                      "outline-variant": "#48474b",
+                      "error-container": "#a70138",
+                      "on-surface-variant": "#acaaae",
+                      "secondary-dim": "#d18aee",
+                      "surface-container-low": "#131316",
+                      "surface-container-high": "#1f1f23",
+                      "tertiary-dim": "#f47788",
+                      "surface-bright": "#2c2c30",
+                      "surface": "#0e0e11",
+                      "on-primary-fixed-variant": "#420078",
+                      "tertiary-fixed": "#ff909e",
+                      "on-background": "#f0edf1",
+                      "outline": "#767579",
+                      "on-secondary-fixed": "#540f72",
+                      "on-secondary-fixed-variant": "#743391",
+                      "on-secondary": "#520c70",
+                      "secondary-fixed": "#f0c1ff",
+                      "secondary-container": "#692886",
+                      "primary-fixed": "#c185ff",
+                      "on-error-container": "#ffb2b9",
+                      "on-tertiary-fixed-variant": "#711229",
+                      "on-primary-container": "#350062",
+                      "surface-container-lowest": "#000000",
+                      "on-error": "#490013",
+                      "surface-container": "#19191d",
+                      "background": "#0e0e11",
+                      "inverse-surface": "#fcf8fd",
+                      "inverse-primary": "#8523dd",
+                      "surface-dim": "#0e0e11",
+                      "primary-fixed-dim": "#b772ff",
+                      "error": "#ff6e84",
+                      "tertiary": "#ff8b9a",
+                      "surface-tint": "#ca98ff",
+                      "primary": "#ca98ff",
+                      "primary-container": "#c185ff",
+                      "on-primary-fixed": "#000000",
+                      "on-surface": "#f0edf1",
+                      "secondary-fixed-dim": "#e9aeff",
+                      "secondary": "#e097fd",
+                      "on-primary": "#46007d",
+                      "surface-container-highest": "#25252a",
+                      "on-secondary-container": "#efc0ff",
+                      "tertiary-fixed-dim": "#fa7c8d",
+                      "on-tertiary": "#62041f",
+                      "on-tertiary-fixed": "#39000e",
+                      "primary-dim": "#9c42f4",
+                      "on-tertiary-container": "#4d0015",
+                      "inverse-on-surface": "#555458"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "display": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0e0e11;
+            color: #f0edf1;
+        }
+        .editorial-gradient {
+            background: linear-gradient(135deg, #ca98ff 0%, #8A2BE2 100%);
+        }
+        .glass-panel {
+            background: rgba(25, 25, 29, 0.6);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e11]/60 backdrop-blur-xl shadow-2xl shadow-purple-900/10">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<a href="https://hbao.ca"><span class="text-xl font-bold tracking-tighter text-white font-manrope">Data Science Enthusiast</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#ca98ff] font-bold border-b-2 border-[#8A2BE2] pb-1 transition-all duration-300" href="#">Essays</a>
+<a class="text-[#f0edf1]/60 font-medium hover:text-[#ca98ff] hover:bg-[#1f1f23]/50 transition-all duration-300 px-2 py-1" href="#">Projects</a>
+<a class="text-[#f0edf1]/60 font-medium hover:text-[#ca98ff] hover:bg-[#1f1f23]/50 transition-all duration-300 px-2 py-1" href="#">Lab</a>
+<a class="text-[#f0edf1]/60 font-medium hover:text-[#ca98ff] hover:bg-[#1f1f23]/50 transition-all duration-300 px-2 py-1" href="#">Archive</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-bold editorial-gradient hover:scale-105 transition-transform">
+                    Subscribe
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<header class="max-w-7xl mx-auto px-8 mb-24 flex flex-col md:flex-row gap-16 items-end">
+<div class="flex-1 space-y-8">
+<div class="flex items-center gap-4 text-primary font-medium tracking-widest text-xs uppercase">
+<span>AI</span>
+<span class="w-8 h-px bg-primary/30"></span>
+</div>
+<h1 class="text-6xl md:text-8xl font-extrabold font-headline leading-[1.1] tracking-tighter text-on-background">
+                    Using <span class="text-primary">AI</span> to determine the most desired job skills in today's market
+                </h1>
+<div class="flex items-center gap-6 pt-4">
+<img class="w-16 h-16 rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A professional close-up portrait of a data scientist with a thoughtful expression, set against a dark, moody studio background with subtle purple rim lighting. The lighting is soft and cinematic, emphasizing technical expertise and modern intelligence. The overall aesthetic is clean and high-end, matching the deep purple and black theme of the portfolio." src="https://hbao.ca/img/hai.jpg"/>
+<div>
+<p class="text-on-background font-bold font-headline text-lg">Hai Bao</p>
+<p class="text-on-surface-variant text-sm">Data Science Enthusiast</p>
+</div>
+</div>
+</div>
+</header>
+
+<!-- Featured Visual -->
+
+<section class="w-full h-[716px] relative mb-32 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover opacity-60" data-alt="A wide-screen, high-resolution data visualization showing complex neural network connections glowing in vibrant neon purple and deep indigo against a pitch-black background. The visualization uses glass-morphic nodes and flowing light trails to represent data transfer and low-latency processing. The composition is cinematic and expansive, evoking a sense of high-technology and futuristic research." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_r1mRt1i2YWmPcbcPSpKl2QjlfhZgBty_DcfXsjHARJn1QxZGALeZtgLfzEeJKLDZijqPmdCB9uh_JLbMtiOWo1mH26MYBzhwP-8iHAt9ctV3JG9GVaJJ7ECl_JzqH8W33RhLN0_hw51i8-gkHYwBXE3_1EQHrpvX5oiqCijXkr8ACElLJ3arXtgMyKTS2A8vS678vO_uxqUV_cCRaLHvsTETvolCHWx2NPZpASJ6S63bLbXinrSWzYc6u_TDINo1zFfHi_HoDmc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-12 left-12 right-12 flex justify-between items-end max-w-7xl mx-auto w-full px-8">
+<div class="bg-surface-container/40 backdrop-blur-md p-6 rounded-xl border-l-4 border-primary">
+    <p><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th style = "background-color: #305496;font-family: Century Gothic, sans-serif;font-size: medium;color: #FFFFFF;text-align: left;border-bottom: 2px solid #305496;padding: 0px 20px 0px 0px;width: auto">Skill</th>
+      <th style = "background-color: #305496;font-family: Century Gothic, sans-serif;font-size: medium;color: #FFFFFF;text-align: left;border-bottom: 2px solid #305496;padding: 0px 20px 0px 0px;width: auto">%_of_postings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Python Programming</td>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">9.58</td>
+    </tr>
+    <tr>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">SQL Development</td>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">9.54</td>
+    </tr>
+    <tr>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Insight Generation</td>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">9.19</td>
+    </tr>
+    <tr>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Data Analysis</td>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">8.48</td>
+    </tr>
+    <tr>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Business Intelligence Strategy</td>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">6.66</td>
+    </tr>
+    <tr>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Platform Engineering</td>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">6.59</td>
+    </tr>
+    <tr>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Network Engineering</td>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">6.35</td>
+    </tr>
+    <tr>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Enterprise Risk Management (ERM)</td>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">6.27</td>
+    </tr>
+    <tr>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Project Management</td>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">5.99</td>
+    </tr>
+    <tr>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Full-Stack AI Engineering</td>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">5.91</td>
+    </tr>
+  </tbody>
+</table></p>
+<p class="text-xs text-primary font-bold uppercase tracking-widest mb-2">Figure 1.0</p>
+<p class="text-on-background text-sm max-w-md">Top skills listed by percentage of mentions in job postings.</p>
+</div>
+</div>
+</section>
+<!-- Article Layout -->
+<section class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-16 mb-32">
+<!-- Table of Contents (Side) -->
+<aside class="hidden lg:block lg:col-span-3 sticky top-32 h-fit space-y-8">
+
+</aside>
+<!-- Main Body Content -->
+<article class="lg:col-span-7 prose prose-invert prose-purple max-w-none">
+<div class="space-y-8" id="intro">
+<p class="text-xl leading-relaxed text-on-background font-light">
+                        In today's data-driven economy, the ability to effectively import, clean, and manage vast quantities of data is not just a technical skill but a fundamental requirement for business success. As organizations grapple with the deluge of information generated by IoT devices, social media, and transactional systems, the infrastructure for data ingestion has become increasingly complex and critical. This necessity is what drives the intense demand for proficiency in core analytical tools: SQL remains indispensable for querying and structuring relational databases; Python serves as the versatile engine for advanced statistical modeling, machine learning, and automated data pipelines; and data analysis itself is the overarching skillset that transforms raw data into actionable business intelligence. Consequently, professionals skilled in combining these three areas—data importing, SQL querying, Python programming, and rigorous data analysis—are highly sought after across virtually every sector, making these competencies essential currency in the modern job market.
+                    </p>
+<p class="text-lg leading-relaxed text-on-surface-variant">
+                        Where did those numbers come from?
+                    </p>
+<p class="text-xl leading-relaxed text-on-background font-light">
+                    It was a long process but here are the steps that were taken:
+    <br>
+    <ul>
+      <li>◌ Extract job listings using AWS ECS on a schedule</li>
+      <li>◌ Store them in a Postgres DB on AWS</li>
+      <li>◌ Use Gemma4 to extract the job skills for each job description</li>
+      <li>◌ Use FAISS (Facebook AI Similarity Search) to create clusters of extracted job skills</li>
+      <li>◌ Use Gemma4 to label the clusters created by FAISS</li>
+      <li>◌ Map the labels back to the extracted job skills</li>
+      <li>◌ Calculate the frequencies of each cluster across all job postings</li>
+    </ul>
+                </p>
+</div>
+<!-- Newsletter Sidebar -->
+<aside class="lg:col-span-2 space-y-8">
+<!-- Additional meta info or ad space -->
+</aside>
+</section>
+<!-- Newsletter Section -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="bg-surface-container-low rounded-3xl p-12 md:p-24 relative overflow-hidden text-center flex flex-col items-center">
+<div class="absolute inset-0 editorial-gradient opacity-5"></div>
+<div class="relative z-10 max-w-2xl">
+<h2 class="text-4xl md:text-5xl font-headline font-extrabold mb-6 tracking-tight">Stay at the <span class="text-primary">Curator's</span> Edge</h2>
+<p class="text-on-surface-variant text-lg mb-12">Deep dives into distributed systems, neural architectures, and the future of machine learning delivered bi-weekly.</p>
+<form class="flex flex-col md:flex-row gap-4 w-full">
+<input class="flex-1 bg-surface-container-highest border-none rounded-xl px-6 py-4 focus:ring-2 focus:ring-primary transition-all text-on-background placeholder:text-on-surface-variant/40" placeholder="curious@research.io" type="email"/>
+<button class="editorial-gradient text-on-primary-container font-bold px-8 py-4 rounded-xl hover:shadow-2xl hover:shadow-purple-900/40 transition-all" type="submit">
+                            Join the Lab
+                        </button>
+</form>
+<p class="mt-6 text-xs text-on-surface-variant/50">Privacy first. No fluff, just high-density technical analysis.</p>
+</div>
+</div>
+</section>
+
+
+<!-- Footer -->
+<footer class="w-full py-16 mt-32 border-t border-white/5 bg-[#0e0e11]">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-8 max-w-7xl mx-auto gap-8">
+<div class="space-y-4">
+<span class="font-manrope font-bold text-lg text-white">The Nocturnal Curator</span>
+<p class="text-[#f0edf1]/40 font-inter text-sm tracking-wide max-w-sm">© 2024 The Nocturnal Portfolio. Built with precision and intent. Forged in the silence of deep work.</p>
+</div>
+<nav class="flex gap-8">
+<a class="text-[#f0edf1]/40 hover:text-[#ca98ff] transition-colors duration-200 font-inter text-sm tracking-wide" href="#">RSS Feed</a>
+<a class="text-[#f0edf1]/40 hover:text-[#ca98ff] transition-colors duration-200 font-inter text-sm tracking-wide" href="#">Source Code</a>
+<a class="text-[#f0edf1]/40 hover:text-[#ca98ff] transition-colors duration-200 font-inter text-sm tracking-wide" href="#">LinkedIn</a>
+<a class="text-[#f0edf1]/40 hover:text-[#ca98ff] transition-colors duration-200 font-inter text-sm tracking-wide" href="#">Contact</a>
+</nav>
+</div>
+</footer>
+</body></html>
