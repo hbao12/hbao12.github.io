@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hai Bao | Data Science Enthusiast</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-container": "#f7798b",
+                      "error-dim": "#d73357",
+                      "surface-variant": "#25252a",
+                      "outline-variant": "#48474b",
+                      "error-container": "#a70138",
+                      "on-surface-variant": "#acaaae",
+                      "secondary-dim": "#d18aee",
+                      "surface-container-low": "#131316",
+                      "surface-container-high": "#1f1f23",
+                      "tertiary-dim": "#f47788",
+                      "surface-bright": "#2c2c30",
+                      "surface": "#0e0e11",
+                      "on-primary-fixed-variant": "#420078",
+                      "tertiary-fixed": "#ff909e",
+                      "on-background": "#f0edf1",
+                      "outline": "#767579",
+                      "on-secondary-fixed": "#540f72",
+                      "on-secondary-fixed-variant": "#743391",
+                      "on-secondary": "#520c70",
+                      "secondary-fixed": "#f0c1ff",
+                      "secondary-container": "#692886",
+                      "primary-fixed": "#c185ff",
+                      "on-error-container": "#ffb2b9",
+                      "on-tertiary-fixed-variant": "#711229",
+                      "on-primary-container": "#350062",
+                      "surface-container-lowest": "#000000",
+                      "on-error": "#490013",
+                      "surface-container": "#19191d",
+                      "background": "#0e0e11",
+                      "inverse-surface": "#fcf8fd",
+                      "inverse-primary": "#8523dd",
+                      "surface-dim": "#0e0e11",
+                      "primary-fixed-dim": "#b772ff",
+                      "error": "#ff6e84",
+                      "tertiary": "#ff8b9a",
+                      "surface-tint": "#ca98ff",
+                      "primary": "#ca98ff",
+                      "primary-container": "#c185ff",
+                      "on-primary-fixed": "#000000",
+                      "on-surface": "#f0edf1",
+                      "secondary-fixed-dim": "#e9aeff",
+                      "secondary": "#e097fd",
+                      "on-primary": "#46007d",
+                      "surface-container-highest": "#25252a",
+                      "on-secondary-container": "#efc0ff",
+                      "tertiary-fixed-dim": "#fa7c8d",
+                      "on-tertiary": "#62041f",
+                      "on-tertiary-fixed": "#39000e",
+                      "primary-dim": "#9c42f4",
+                      "on-tertiary-container": "#4d0015",
+                      "inverse-on-surface": "#555458"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "display": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0e0e11;
+            color: #f0edf1;
+        }
+        .editorial-gradient {
+            background: linear-gradient(135deg, #ca98ff 0%, #8A2BE2 100%);
+        }
+        .glass-panel {
+            background: rgba(25, 25, 29, 0.6);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e11]/60 backdrop-blur-xl shadow-2xl shadow-purple-900/10">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<span class="text-xl font-bold tracking-tighter text-white font-manrope">Data Science Enthusiast</span>
+<div class="hidden md:flex items-center gap-8">
+    <a class="text-[#f0edf1]/60 font-medium hover:text-[#ca98ff] hover:bg-[#1f1f23]/50 transition-all duration-300 px-2 py-1" href="index.html">Home</a>
+<a class="text-[#ca98ff] font-bold border-b-2 border-[#8A2BE2] pb-1 transition-all duration-300" href="#">Blog</a>
+<a class="text-[#f0edf1]/60 font-medium hover:text-[#ca98ff] hover:bg-[#1f1f23]/50 transition-all duration-300 px-2 py-1" href="projects.html">Projects</a>
+<a class="text-[#f0edf1]/60 font-medium hover:text-[#ca98ff] hover:bg-[#1f1f23]/50 transition-all duration-300 px-2 py-1" href="about.html">About</a>
+<a class="text-[#f0edf1]/60 font-medium hover:text-[#ca98ff] hover:bg-[#1f1f23]/50 transition-all duration-300 px-2 py-1" href="archives.html">Archive</a>
+</div>
+<div class="flex items-center gap-6">
+<a href="mailto:hbao12@gmail.com"><button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-bold editorial-gradient hover:scale-105 transition-transform">
+                    Contact
+                </button></a>
+</div>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<header class="max-w-7xl mx-auto px-8 mb-24 flex flex-col md:flex-row gap-16 items-end">
+<div class="flex-1 space-y-8">
+<div class="flex items-center gap-4 text-primary font-medium tracking-widest text-xs uppercase">
+<span>Blog Post</span>
+<span class="w-8 h-px bg-primary/30"></span>
+<span>5 Min Read</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-extrabold font-headline leading-[1.1] tracking-tighter text-on-background">
+                    MTG Draft Data</span>
+                </h1>
+<div class="flex items-center gap-6 pt-4">
+<img class="w-16 h-16 rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A professional close-up portrait of a data scientist with a thoughtful expression, set against a dark, moody studio background with subtle purple rim lighting. The lighting is soft and cinematic, emphasizing technical expertise and modern intelligence. The overall aesthetic is clean and high-end, matching the deep purple and black theme of the portfolio." src="img/hai.jpg"/>
+<div>
+<p class="text-on-background font-bold font-headline text-lg">Hai Bao</p>
+<p class="text-on-surface-variant text-sm">Data Science Enthusiast • May 19, 2026</p>
+</div>
+</div>
+</div>
+<aside class="hidden lg:block w-1/3 pb-4">
+<p class="text-on-surface-variant text-lg leading-relaxed border-l-2 border-primary/20 pl-8 font-light italic" id="intro">
+                    "Information is the oil of the 21st century, and analytics is the combustion engine." — Peter Sondergaard
+                </p>
+</aside>
+</header>
+<!-- Featured Visual -->
+<!-- Article Layout -->
+<section class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-16 mb-32">
+<!-- Table of Contents (Side) -->
+<!-- Table of Contents (Side) -->
+<aside class="hidden lg:block lg:col-span-3 sticky top-32 h-fit space-y-8">
+<div class="text-xs font-bold uppercase text-on-surface-variant tracking-widest mb-6">Contents</div>
+<nav class="flex flex-col gap-4 text-sm font-medium">
+<a class="text-primary hover:text-primary-fixed transition-colors" href="#intro">01. Intro</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#graph">02. Plotly Pie Graph</a>
+</nav>
+</aside>
+<!-- Main Body Content -->
+<article class="lg:col-span-7 prose prose-invert prose-purple max-w-none">
+<div class="space-y-8" id="intro">
+<p class="text-xl leading-relaxed text-on-background font-light">
+                        Using trophy deck data from 17lands.com, I created a ranking system that ranks all the cards
+    in the latest draft set based on the percentage of times that a card is found in a trophy deck at Mythic level on
+    MTG Arena.
+                    </p>
+<p class="text-lg leading-relaxed text-on-surface-variant">
+                         My issue with the 17lands rating system was that the calculations were made under the
+    assumption that all players are of equal skill level and I believe that is obviously not true. So I wanted to
+    create my own ranking system that would remove that assumption by only include trophy decks from the highest
+    level on MTG Arena.
+                    </p>
+</div>
+<!-- Technical Diagram Section -->
+<div class="my-24 flex flex-col items-center">
+<div class="w-half bg-surface-container rounded-2xl overflow-hidden shadow-2xl border border-white/5">
+    <a href="https://rs3-bucket-721529235014-ca-central-1-an.s3.ca-central-1.amazonaws.com/archetype_cmc.html"><img alt="High-resolution performance benchmark graph" class="w-full h-full object-cover" src="img/cmc_example.png"/></a>
+</div>
+<div class="mt-8 max-w-xl text-center" id="graph">
+<p class="text-sm text-on-surface-variant leading-relaxed">
+<span class="font-bold text-primary mr-2 uppercase tracking-widest text-[10px]">Fig 1.1:</span> 
+            Table with percentiles and custom draft scores. Click on the graph for the full screen view.
+        </p>
+</div>
+</div>
+<p class="text-xl leading-relaxed text-on-background font-light">
+                    Percentile refers to the percentile that the card is found in a trophy deck by rarity. For example, "Ark of
+    Hunger" is found in ~30% of all red/white decks that trophied on MTG Arena. 30% for a rare is best in it's class. The scoring
+    system also adjusts for rarity, docking points for lower rarity cards such as commons and uncommons. It also provides bonus
+    points if the same card is also highly sought after in other archetypes.
+                </p>
+<!-- Code Block Section -->
+
+</article>
+<!-- Newsletter Sidebar -->
+<aside class="lg:col-span-2 space-y-8">
+<!-- Additional meta info or ad space -->
+</aside>
+</section>
+<!-- Newsletter Section -->
+
+
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 mt-32 border-t border-white/5 bg-[#0e0e11]">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-8 max-w-7xl mx-auto gap-8">
+<div class="space-y-4">
+<span class="font-manrope font-bold text-lg text-white">Data Science Enthusiast</span>
+<p class="text-[#f0edf1]/40 font-inter text-sm tracking-wide max-w-sm">© 2026 Hai Bao</p>
+</div>
+<nav class="flex gap-8">
+<a class="text-[#f0edf1]/40 hover:text-[#ca98ff] transition-colors duration-200 font-inter text-sm tracking-wide" href="#">RSS Feed</a>
+<a class="text-[#f0edf1]/40 hover:text-[#ca98ff] transition-colors duration-200 font-inter text-sm tracking-wide" href="#">Source Code</a>
+<a class="text-[#f0edf1]/40 hover:text-[#ca98ff] transition-colors duration-200 font-inter text-sm tracking-wide" href="#">LinkedIn</a>
+<a class="text-[#f0edf1]/40 hover:text-[#ca98ff] transition-colors duration-200 font-inter text-sm tracking-wide" href="#">Contact</a>
+</nav>
+</div>
+</footer>
+</body></html>
