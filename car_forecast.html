@@ -127,7 +127,7 @@
 <span>10 Min Read</span>
 </div>
 <h1 class="text-6xl md:text-8xl font-extrabold font-headline leading-[1.1] tracking-tighter text-on-background">
-                    Canadian Vehicle Sales Forecast
+                    Sales Forecast
                 </h1>
 <div class="flex items-center gap-6 pt-4">
 <img class="w-16 h-16 rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A professional close-up portrait of a data scientist with a thoughtful expression, set against a dark, moody studio background with subtle purple rim lighting. The lighting is soft and cinematic, emphasizing technical expertise and modern intelligence. The overall aesthetic is clean and high-end, matching the deep purple and black theme of the portfolio." src="img/hai.jpg"/>
@@ -151,7 +151,7 @@
 <div class="text-xs font-bold uppercase text-on-surface-variant tracking-widest mb-6">Contents</div>
 <nav class="flex flex-col gap-4 text-sm font-medium">
 <a class="text-primary hover:text-primary-fixed transition-colors" href="#intro">01. Why forecast sales?</a>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#walmart">02. StatsCan dataset</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#statscan">02. StatsCan dataset</a>
 <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#results">03. Forecast</a>
 <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#conclusion">04. Future sales</a>
 </nav>
@@ -160,14 +160,13 @@
 <article class="lg:col-span-7 prose prose-invert prose-purple max-w-none">
 <div class="space-y-8" id="intro">
 <p class="text-xl leading-relaxed text-on-background font-light">
-                        Customer segmentation is the strategic process of dividing a customer base into groups sharing
-    similar characteristics—such as demographics, behaviors, or needs—to enable targeted marketing, improved retention,
-    and higher ROI. We can achieve this through cluster analysis, where we group similar data points together.
+                        Building a sales forecast transforms your revenue from an unpredictable guess into a data-driven roadmap.
+    It allows you to anticipate future revenue, prevent cash flow crises, and make confident decisions about hiring, inventory, and budgeting.
                     </p>
-<p class="text-lg leading-relaxed text-on-surface-variant" id="walmart">
-                        Using a <span class="text-primary"><a href="https://www.kaggle.com/competitions/walmart-recruiting-trip-type-classification">
-    dataset</a></span> provided by Walmart, that contains anonymous purchase data from an anonymous store,
-    we will attempt to create different clusters, which will represent different customer profiles, based on the purchase data.
+<p class="text-lg leading-relaxed text-on-surface-variant" id="statscan">
+                        Using a <span class="text-primary"><a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=2010008501">
+    dataset</a></span> provided by Stats Canada, that contains vehicle sales data in Canada,
+    we will attempt to build a forecast, based on this data.
                     </p>
 </div>
 <!-- Technical Diagram Section -->
