@@ -97,6 +97,54 @@
             background: rgba(25, 25, 29, 0.6);
             backdrop-filter: blur(20px);
         }
+        .rc-forecast-wrap {
+            position: relative;
+            cursor: pointer;
+        }
+        .rc-forecast-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 10;
+        }
+        #rc-fullscreen {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background: rgba(14, 14, 17, 0.95);
+            backdrop-filter: blur(8px);
+            display: none;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: center;
+            padding: 0;
+        }
+        #rc-fullscreen.open {
+            display: flex;
+        }
+        #rc-fullscreen iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 0;
+        }
+        #rc-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: #1f1f23;
+            color: #f0edf1;
+            border: 1px solid #48474b;
+            border-radius: 9999px;
+            width: 2.75rem;
+            height: 2.75rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+        #rc-close:hover {
+            background: #25252a;
+            color: #ca98ff;
+        }
     </style>
 </head>
 <body class="font-body selection:bg-primary selection:text-on-primary">
@@ -127,13 +175,13 @@
 <span>10 Min Read</span>
 </div>
 <h1 class="text-6xl md:text-8xl font-extrabold font-headline leading-[1.1] tracking-tighter text-on-background">
-                    Sales Forecast
+                    Rogers Centre Attendance Forecast
                 </h1>
 <div class="flex items-center gap-6 pt-4">
 <img class="w-16 h-16 rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A professional close-up portrait of a data scientist with a thoughtful expression, set against a dark, moody studio background with subtle purple rim lighting. The lighting is soft and cinematic, emphasizing technical expertise and modern intelligence. The overall aesthetic is clean and high-end, matching the deep purple and black theme of the portfolio." src="img/hai.jpg"/>
 <div>
 <p class="text-on-background font-bold font-headline text-lg">Hai Bao</p>
-<p class="text-on-surface-variant text-sm">Data Science Enthusiast • Jul 15, 2026</p>
+<p class="text-on-surface-variant text-sm">Data Science Enthusiast • Aug 27, 2026</p>
 </div>
 </div>
 </div>
@@ -160,42 +208,91 @@
 <article class="lg:col-span-7 prose prose-invert prose-purple max-w-none">
 <div class="space-y-8" id="intro">
 <p class="text-xl leading-relaxed text-on-background font-light">
-                        Building a sales forecast transforms your revenue from an unpredictable guess into a data-driven roadmap.
-    It allows you to anticipate future revenue, prevent cash flow crises, and make confident decisions about hiring, inventory, and budgeting.
+                        Building a ML model that can accurately forecast attendance can provide the following benefits:<br>
+    <br><b>Capex</b>
+    <li>Optimize food inventory costs</li>
+    <li>Reduce food waste and expenses</li>
+    <li>Cut stadium food overhead</li><br><br>
+    <b>Revenue</b>
+    <li>Optimize dynamic pricing for tickets</li>
+    <li>Maximize revenue by having sales target local groups or corporate clients early when a game shows a soft forecasted turnout</li>
                     </p>
 <p class="text-lg leading-relaxed text-on-surface-variant" id="statscan">
-                        Using a <span class="text-primary"><a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=2010008501">
-    dataset</a></span> provided by Stats Canada, that contains vehicle sales data in Canada,
-    we will attempt to build a forecast, based on this data.
+                        The following forecast of attendance at Blue Jays home games is completely built on top of data from MLB's StatsAPI.
                     </p>
 </div>
 <!-- Technical Diagram Section -->
 <div class="my-24 flex flex-col items-center">
 <div class="w-full rounded-2xl overflow-hidden shadow-2xl border border-white/5">
-    <iframe title="cdn_vehicle_sales" style="margin: 0 auto" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMmIwNmFlNWMtMzRjNi00Yjg4LThiOGItYzU2YjFkNDAxNmNmIiwidCI6IjU0ZjkxMGMzLWFlNzQtNDNlMS05NjUxLTc3NjU1MzAxMTQ1YSJ9" frameborder="0" allowFullScreen="true"></iframe>
+    <div class="rc-forecast-wrap" onclick="openForecast()">
+        <iframe title="rc_forecast" scrolling="no" style="display:block; width: 100%; height: 440px; overflow: hidden; border: 0; pointer-events: none" src="https://rs3-bucket-721529235014-ca-central-1-an.s3.ca-central-1.amazonaws.com/attendance_remaining_forecast.html" frameborder="0" allowFullScreen="true"></iframe>
+        <div class="rc-forecast-overlay"></div>
+    </div>
 </div>
+<div id="rc-fullscreen">
+    <button id="rc-close" onclick="closeForecast()" aria-label="Close fullscreen">&times;</button>
+    <iframe id="rc-fullscreen-iframe" title="rc_forecast_full" scrolling="no" style="overflow: hidden" data-src="https://rs3-bucket-721529235014-ca-central-1-an.s3.ca-central-1.amazonaws.com/attendance_remaining_forecast.html" frameborder="0" allowFullScreen="true"></iframe>
+</div>
+<script>
+    function openForecast() {
+        var f = document.getElementById('rc-fullscreen-iframe');
+        if (!f.getAttribute('src')) {
+            f.setAttribute('src', f.getAttribute('data-src'));
+        }
+        document.getElementById('rc-fullscreen').classList.add('open');
+    }
+    function closeForecast() {
+        document.getElementById('rc-fullscreen').classList.remove('open');
+    }
+</script>
 <div class="mt-8 max-w-xl text-center">
 <p class="text-sm text-on-surface-variant leading-relaxed">
 <span class="font-bold text-primary mr-2 uppercase tracking-widest text-[10px]">Fig 1.1:</span>
-            Sales forecast in Power BI. Click on the bottom right corner for fullscreen view.
+            Attendance Forecast using Plotly. Forecast was trained using data from 2015-2019, 2022-2025.
+    2020-2021 were omitted due to Covid. <br>Click on the graph for a fullscreen view.
         </p>
 </div>
 </div>
+
 <div class="space-y-6 mt-16" id="models">
-<h2 class="text-4xl font-headline font-bold text-on-background">Forecast Updates</h2>
-<p class="text-lg text-on-surface-variant">Will be automatically updated as new data from StatsCan is made available
-    through StatsCan Web Data Service (WDS) API.
+<h2 class="text-4xl font-headline font-bold text-on-background">Factors affecting Attendance</h2>
+<p class="text-lg text-on-surface-variant">Another benefit of building a forecast is to see
+    what factors drive attendance.
 </p>
+    <!-- Technical Diagram Section -->
+<div class="my-24 flex flex-col items-center">
+<div class="w-full rounded-2xl overflow-hidden shadow-2xl border border-white/5">
+    <img title="shap_bar_plot" style="display:block; width: 100%; height: 440px; object-fit: contain; border: 0; background: #19191d" src="https://rs3-bucket-721529235014-ca-central-1-an.s3.ca-central-1.amazonaws.com/shap_bar_plot.png" alt="SHAP bar plot"/>
+</div>
+<div class="mt-8 max-w-xl text-center">
+<p class="text-sm text-on-surface-variant leading-relaxed">
+<span class="font-bold text-primary mr-2 uppercase tracking-widest text-[10px]">Fig 1.2:</span>
+            SHAP feature importance.
+        </p>
 </div>
 </div>
+</div>
+    <p><br>
+        <b>Key Takeaways:</b><br><br>
+        <li>
+It's a momentum model. The top three features (ewma_7 + lag_combined + ma_7) all relate to recent attendance so
+        when the team is doing well, fans will consistently come out and vice-versa. This also helps explain the
+        consistent poor attendance early in the season.</li>
+<li>
+Scheduling (game_hour, day_of_week) beats opponent/promotions. When the game is played drives attendance far more than who is playing or whether there's a giveaway.
+    This tracks since day games during the week are always poor for attendance.</li>
+<li>
+Opponent (away_team_combined) is nearly irrelevant here. I think this is a result of the new renovations that improved fan experience
+and reduced capacity so that it feels busier and livelier and more appealing to fans.</li>
+    </p>
 <!-- Newsletter Sidebar -->
 <div class="space-y-6 mt-16" id="models">
-<h2 class="text-4xl font-headline font-bold text-on-background">Methodology</h2>
+<h2 class="text-4xl font-headline font-bold text-on-background">Tech Stack</h2>
     <p class="text-lg text-on-surface-variant">
-        <li>Used STL Decomposition since there is evidence of a seasonal trend.</li>
-        <li>Extrapolated data to remove outliers (COVID)</li>
-        <li>Used ARIMA to forecast Trend component.</li>
-        <li>Used XGBoost to forecast Residuals component</li>
+        <li>Postgres database to store data</li>
+        <li>Python to extract data from MLB StatsAPI</li>
+        <li>Python & XGBoost to build forecast</li>
+        <li>AWS S3 Cloud Object Storage to host the Plotly graphs</li>
         </p>
     <!-- Technical Diagram Section -->
 <div class="my-20 bg-surface-container-low rounded-2xl border border-white/5 overflow-hidden shadow-2xl" id="results">
@@ -233,4 +330,19 @@
 </nav>
 </div>
 </footer>
+    <script>
+        function openModal(modalId, iframeId) {
+            var m = document.getElementById(modalId);
+            if (iframeId) {
+                var f = document.getElementById(iframeId);
+                if (f && !f.getAttribute('src')) {
+                    f.setAttribute('src', f.getAttribute('data-src'));
+                }
+            }
+            m.classList.add('open');
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('open');
+        }
+    </script>
 </body></html>
