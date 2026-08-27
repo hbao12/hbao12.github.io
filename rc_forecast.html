@@ -198,15 +198,15 @@
 <aside class="hidden lg:block lg:col-span-3 sticky top-32 h-fit space-y-8">
 <div class="text-xs font-bold uppercase text-on-surface-variant tracking-widest mb-6">Contents</div>
 <nav class="flex flex-col gap-4 text-sm font-medium">
-<a class="text-primary hover:text-primary-fixed transition-colors" href="#intro">01. Why forecast sales?</a>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#statscan">02. StatsCan dataset</a>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#results">03. Forecast</a>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#conclusion">04. Future sales</a>
+<a class="text-primary hover:text-primary-fixed transition-colors" href="#intro">01. Why forecast attendance?</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#forecast">02. Forecast</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#performance">03. Model Performance</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#factors">04. Factors affecting attendance</a>
 </nav>
 </aside>
 <!-- Main Body Content -->
 <article class="lg:col-span-7 prose prose-invert prose-purple max-w-none">
-<div class="space-y-8" id="intro">
+<div class="space-y-8" id="intro"><h2 class="text-4xl font-headline font-bold text-on-background">Why forecast attendance?</h2>
 <p class="text-xl leading-relaxed text-on-background font-light">
                         Building a ML model that can accurately forecast attendance can provide the following benefits:<br>
     <br><b>Capex</b>
@@ -217,7 +217,9 @@
     <li>Optimize dynamic pricing for tickets</li>
     <li>Maximize revenue by having sales target local groups or corporate clients early when a game shows a soft forecasted turnout</li>
                     </p>
-<p class="text-lg leading-relaxed text-on-surface-variant" id="statscan">
+     <h2 class="text-4xl font-headline font-bold text-on-background">Forecast</h2>
+<p class="text-lg leading-relaxed text-on-surface-variant" id="forecast">
+
                         The following forecast of attendance at Blue Jays home games is completely built on top of data from MLB's StatsAPI.
                     </p>
 </div>
@@ -248,13 +250,35 @@
 <div class="mt-8 max-w-xl text-center">
 <p class="text-sm text-on-surface-variant leading-relaxed">
 <span class="font-bold text-primary mr-2 uppercase tracking-widest text-[10px]">Fig 1.1:</span>
-            Attendance Forecast using Plotly. Forecast was trained using data from 2015-2019, 2022-2025.
-    2020-2021 were omitted due to Covid. <br>Click on the graph for a fullscreen view.
+            Attendance Forecast using Plotly.<br>Click on the graph for a fullscreen view.
         </p>
 </div>
 </div>
+    <div class="space-y-6 mt-16" id="performance">
+<h2 class="text-4xl font-headline font-bold text-on-background">Model Performance</h2>
+<p class="text-lg text-on-surface-variant">How good is the actual model?
+</p>
+    <!-- Technical Diagram Section -->
+<div class="my-24 flex flex-col items-center">
+<div class="w-full rounded-2xl overflow-hidden shadow-2xl border border-white/5">
+    <iframe title="walk_forward_mape" scrolling="no" style="display:block; width: 100%; height: 440px; overflow: hidden; border: 0" src="https://rs3-bucket-721529235014-ca-central-1-an.s3.ca-central-1.amazonaws.com/walk_forward_mape.html" frameborder="0" allowFullScreen="true"></iframe>
+</div>
+<div class="mt-8 max-w-xl text-center">
+<p class="text-sm text-on-surface-variant leading-relaxed">
+<span class="font-bold text-primary mr-2 uppercase tracking-widest text-[10px]">Fig 1.2:</span>
+            Walk-forward MAPE by forecast horizon.
+        </p>
+</div>
+</div>
+</div>
+    <p><br>
+For all 3 years, 2024-2026, the MAPE is less than 10%, which means on average, our game-to-game predictions were
+        within 10% on average. More importantly, we still achieved this benchmark
+        during the 2024 season, where the Blue Jays had a disappointing season, going 74-88, which
+        was good for last in the AL East.
+    </p>
 
-<div class="space-y-6 mt-16" id="models">
+<div class="space-y-6 mt-16" id="factors">
 <h2 class="text-4xl font-headline font-bold text-on-background">Factors affecting Attendance</h2>
 <p class="text-lg text-on-surface-variant">Another benefit of building a forecast is to see
     what factors drive attendance.
@@ -283,7 +307,8 @@ Scheduling (game_hour, day_of_week) beats opponent/promotions. When the game is 
     This tracks since day games during the week are always poor for attendance.</li>
 <li>
 Opponent (away_team_combined) is nearly irrelevant here. I think this is a result of the new renovations that improved fan experience
-and reduced capacity so that it feels busier and livelier and more appealing to fans.</li>
+and reduced capacity so that it feels busier and livelier and more appealing to fans. In the past, attendance would drop off
+against certain teams and the stadium would look very empty and unappealing.</li>
     </p>
 <!-- Newsletter Sidebar -->
 <div class="space-y-6 mt-16" id="models">
