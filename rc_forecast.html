@@ -237,11 +237,23 @@
 </div>
 <script>
     function openForecast() {
+        var fs = document.getElementById('rc-fullscreen');
         var f = document.getElementById('rc-fullscreen-iframe');
-        if (!f.getAttribute('src')) {
-            f.setAttribute('src', f.getAttribute('data-src'));
-        }
-        document.getElementById('rc-fullscreen').classList.add('open');
+        fs.classList.add('open');
+        var baseSrc = f.getAttribute('data-src');
+        f.setAttribute('src', baseSrc + (baseSrc.indexOf('?') === -1 ? '?' : '&') + 'v=' + Date.now());
+        f.addEventListener('load', function () {
+            try {
+                var doc = f.contentDocument || f.contentWindow.document;
+                if (doc && doc.querySelectorAll) {
+                    doc.querySelectorAll('.js-plotly-plot').forEach(function (el) {
+                        if (f.contentWindow.Plotly && f.contentWindow.Plotly.Plots) {
+                            f.contentWindow.Plotly.Plots.resize(el);
+                        }
+                    });
+                }
+            } catch (e) {}
+        }, { once: true });
     }
     function closeForecast() {
         document.getElementById('rc-fullscreen').classList.remove('open');
