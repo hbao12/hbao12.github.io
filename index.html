@@ -4,8 +4,9 @@
     <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hai Bao | Data Science Portfolio</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
@@ -13,57 +14,57 @@
         theme: {
           extend: {
             "colors": {
-                    "surface-tint": "#ca98ff",
-                    "surface-container-high": "#1f1f23",
-                    "tertiary": "#ff8b9a",
-                    "surface-container": "#19191d",
-                    "primary-container": "#c185ff",
-                    "on-primary-fixed": "#000000",
-                    "on-secondary-fixed": "#540f72",
-                    "outline": "#767579",
-                    "primary-dim": "#9c42f4",
-                    "on-primary-container": "#350062",
-                    "secondary-fixed-dim": "#e9aeff",
                     "primary-fixed": "#c185ff",
-                    "secondary-dim": "#d18aee",
-                    "surface-dim": "#0e0e11",
-                    "on-error-container": "#ffb2b9",
-                    "on-tertiary-container": "#4d0015",
-                    "background": "#0e0e11",
-                    "on-secondary-container": "#efc0ff",
-                    "error-dim": "#d73357",
-                    "error-container": "#a70138",
-                    "tertiary-dim": "#f47788",
+                    "on-secondary-fixed": "#540f72",
+                    "on-background": "#f0edf1",
+                    "secondary-container": "#692886",
                     "outline-variant": "#48474b",
-                    "tertiary-fixed-dim": "#fa7c8d",
-                    "on-surface-variant": "#acaaae",
-                    "tertiary-fixed": "#ff909e",
-                    "surface-bright": "#2c2c30",
-                    "error": "#ff6e84",
+                    "surface-dim": "#0e0e11",
+                    "tertiary": "#ff8b9a",
+                    "primary-container": "#c185ff",
                     "inverse-surface": "#fcf8fd",
                     "surface-container-lowest": "#000000",
-                    "primary-fixed-dim": "#b772ff",
-                    "on-secondary-fixed-variant": "#743391",
-                    "on-primary-fixed-variant": "#420078",
-                    "on-tertiary-fixed": "#39000e",
+                    "tertiary-dim": "#f47788",
+                    "on-error-container": "#ffb2b9",
+                    "secondary-dim": "#d18aee",
+                    "surface-container": "#19191d",
+                    "background": "#0e0e11",
                     "on-surface": "#f0edf1",
-                    "surface-variant": "#25252a",
-                    "surface-container-highest": "#25252a",
-                    "on-secondary": "#520c70",
-                    "tertiary-container": "#f7798b",
-                    "on-error": "#490013",
-                    "inverse-primary": "#8523dd",
-                    "secondary-container": "#692886",
-                    "on-tertiary": "#62041f",
                     "surface-container-low": "#131316",
-                    "on-primary": "#46007d",
-                    "on-tertiary-fixed-variant": "#711229",
                     "inverse-on-surface": "#555458",
-                    "surface": "#0e0e11",
-                    "primary": "#ca98ff",
+                    "error-dim": "#d73357",
                     "secondary-fixed": "#f0c1ff",
-                    "on-background": "#f0edf1",
-                    "secondary": "#e097fd"
+                    "surface-variant": "#25252a",
+                    "on-primary-fixed": "#000000",
+                    "on-tertiary-container": "#4d0015",
+                    "on-secondary": "#520c70",
+                    "surface": "#0e0e11",
+                    "error-container": "#a70138",
+                    "primary-dim": "#9c42f4",
+                    "on-tertiary-fixed-variant": "#711229",
+                    "on-primary-fixed-variant": "#420078",
+                    "on-surface-variant": "#acaaae",
+                    "surface-tint": "#ca98ff",
+                    "on-secondary-fixed-variant": "#743391",
+                    "surface-container-high": "#1f1f23",
+                    "secondary": "#e097fd",
+                    "primary": "#ca98ff",
+                    "secondary-fixed-dim": "#e9aeff",
+                    "tertiary-fixed": "#ff909e",
+                    "on-tertiary": "#62041f",
+                    "on-tertiary-fixed": "#39000e",
+                    "on-error": "#490013",
+                    "tertiary-container": "#f7798b",
+                    "on-secondary-container": "#efc0ff",
+                    "error": "#ff6e84",
+                    "surface-container-highest": "#25252a",
+                    "outline": "#767579",
+                    "tertiary-fixed-dim": "#fa7c8d",
+                    "on-primary-container": "#350062",
+                    "inverse-primary": "#8523dd",
+                    "primary-fixed-dim": "#b772ff",
+                    "surface-bright": "#2c2c30",
+                    "on-primary": "#46007d"
             },
             "borderRadius": {
                     "DEFAULT": "0.125rem",
@@ -81,179 +82,304 @@
       }
     </script>
 <style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      }
-      body {
-        background-color: #0e0e11;
-        color: #f0edf1;
-      }
-      .tonal-shift-bottom {
-        background: linear-gradient(to bottom, rgba(14,14,17,1) 0%, rgba(19,19,22,1) 100%);
-      }
-      .tonal-shift-top {
-        background: linear-gradient(to top, rgba(14,14,17,1) 0%, rgba(25,25,29,0.3) 100%);
-      }
-      .glass-card {
-        background: rgba(31, 31, 35, 0.6);
-        backdrop-filter: blur(20px);
-      }
-      .text-gradient {
-        background: linear-gradient(135deg, #ca98ff 0%, #8A2BE2 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      .primary-gradient-bg {
-        background: linear-gradient(135deg, #ca98ff 0%, #8A2BE2 100%);
-      }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(25, 25, 29, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .hero-gradient {
+            background: radial-gradient(ellipse at 20% 50%, rgba(137, 69, 255, 0.15) 0%, transparent 50%),
+                        radial-gradient(ellipse at 80% 20%, rgba(255, 139, 154, 0.1) 0%, transparent 50%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #ca98ff 0%, #ff8b9a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(137, 69, 255, 0.2);
+        }
     </style>
 </head>
-<title>Hai Bao - Data Science Enthusiast</title>
-<body class="font-body selection:bg-primary selection:text-on-primary">
-<!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-zinc-950/60 backdrop-blur-xl shadow-[0px_20px_40px_rgba(0,0,0,0.4)]">
-<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
-<div class="text-2xl text-purple-400 font-bold tracking-tighter text-zinc-100 font-headline">Data Science Enthusiast</div>
-<nav class="hidden md:flex items-center gap-10 font-headline tracking-tight">
-<a class="text-purple-400 font-bold border-b-2 border-purple-500 pb-1" href="projects.html">Projects</a>
-<a class="text-zinc-400 hover:text-zinc-100 transition-colors" href="resume.pdf">Resume</a>
-    <a class="text-zinc-400 hover:text-zinc-100 transition-colors" href="powerbi.html">Power BI Visualizations</a>
+<body class="bg-background text-on-surface selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar Shell -->
+<header class="bg-[#0e0e11]/80 backdrop-blur-lg docked full-width top-0 z-50 bg-gradient-to-b from-[#131316] to-transparent shadow-2xl shadow-purple-900/20">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<a href="/"><div class="text-2xl font-black tracking-tighter text-white dark:text-[#f0edf1]">Hai Bao</div></a>
+<nav class="hidden md:flex items-center space-x-8 font-['Manrope'] tracking-tight">
+    <a class="text-[#8A2BE2] font-bold border-b-2 border-[#8A2BE2] pb-1" href="index.html">Home</a>
+    <a class="text-[#f0edf1]/60 hover:text-[#f0edf1] transition-colors" href="projects.html">Projects</a>
+    <a class="text-[#f0edf1]/60 hover:text-[#f0edf1] transition-colors" href="resume.pdf">Resume</a>
+    <a class="text-[#f0edf1]/60 hover:text-[#f0edf1] transition-colors" href="powerbi.html">Power BI Visualizations</a>
 </nav>
-<a href="mailto:hbao12@gmail.com"><button class="primary-gradient-bg text-on-primary-container font-headline font-bold px-6 py-2.5 rounded hover:scale-95 active:scale-90 transition-transform">
-                Let's Talk
-</button></a>
+<div class="flex items-center gap-4">
+</div>
 </div>
 </header>
-<main class="pt-20">
+<main class="min-h-screen">
+
 <!-- Hero Section -->
-<section class="relative min-h-[921px] flex items-center max-w-7xl mx-auto px-8 py-24 overflow-hidden">
-<div class="grid grid-cols-12 gap-8 items-center w-full">
-<div class="col-span-12 md:col-span-7 z-10">
-<h1 class="font-headline font-extrabold text-7xl md:text-8xl leading-tight tracking-tighter mb-8">
-                        Greetings! <br/>
-<span class="text-gradient">Welcome to my personal website</span>
-</h1>
-<p class="text-on-surface-variant text-xl max-w-xl font-body leading-relaxed mb-12">
-                        My name is Hai and I specialize in using data to help solve business problems and driving business
-    efficiency through automation.
-                        <br>
-                    </p>
-<div class="flex gap-6">
-<a href="projects.html"><button class="primary-gradient-bg px-8 py-4 rounded text-on-primary-fixed font-bold tracking-wide flex items-center gap-2">
-                            Explore Work
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
-</button></a>
-<a href="resume.pdf"><button class="surface-container px-8 py-4 rounded text-on-surface font-bold tracking-wide hover:bg-surface-bright transition-colors">
-                            Download Resume
-</button></a>
+<section class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-20">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-72 h-72 bg-tertiary/20 rounded-full blur-3xl animate-float" style="animation-delay: -3s;"></div>
 </div>
-</div>
-<div class="col-span-12 md:col-span-5 relative mt-12 md:mt-0">
-<div class="relative z-10 glass-card p-4 rounded-xl rotate-3 hover:rotate-0 transition-transform duration-700">
-<img alt="Professional Data Scientist Portrait" class="rounded shadow-2xl w-full grayscale contrast-125 brightness-90" data-alt="Hai" src="img/hai.jpg"/>
-</div>
-<!-- Background ambient pulse -->
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary-dim/20 blur-[120px] rounded-full -z-10"></div>
-</div>
+<div class="max-w-screen-2xl mx-auto px-8 w-full relative z-10">
+    <div class="max-w-4xl">
+        <p class="text-primary text-sm uppercase tracking-[0.3em] font-bold mb-6">Data Science Enthusiast</p>
+        <h1 class="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter leading-none mb-8">
+            Hi, I'm <span class="text-gradient">Hai Bao</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-on-surface-variant font-light max-w-2xl leading-relaxed mb-12">
+            Turning raw data into actionable insights through machine learning, statistical analysis, and creative problem solving.
+        </p>
+        <div class="flex flex-wrap gap-4">
+            <a href="projects.html" class="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-primary-dim transition-colors">
+                View My Work
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+            <a href="resume.pdf" class="inline-flex items-center gap-2 border border-white/10 text-on-surface px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-surface-container transition-colors">
+                Download Resume
+            </a>
+        </div>
+    </div>
 </div>
 </section>
-<!-- Technical Command Center (Expertise) -->
-<section class="bg-surface-container-low py-32">
-<div class="max-w-7xl mx-auto px-8">
-<div class="mb-20">
-<span class="text-primary font-headline tracking-[0.2em] text-xs font-bold uppercase mb-4 block">Engine Room</span>
-<h2 class="font-headline text-5xl font-extrabold tracking-tight">Technical Command Center</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-<!-- Column 1 -->
-<div class="space-y-6">
-<div class="surface-container p-8 rounded-xl border-l-4 border-primary/40 hover:bg-surface-bright transition-colors group">
-<div class="flex justify-between items-start mb-4">
-<span class="material-symbols-outlined text-primary text-4xl" data-icon="terminal">terminal</span>
-<span class="text-xs font-label text-on-surface-variant font-bold tracking-widest uppercase">Language</span>
-</div>
-<h3 class="text-2xl font-headline font-bold mb-3">Python Ecosystem</h3>
-<p class="text-on-surface-variant leading-relaxed mb-6">Mastery of Pandas, NumPy for high-performance data engineering.</p>
-<div class="flex flex-wrap gap-2">
-<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">NumPy</span>
-<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">Pandas</span>
-</div>
-</div>
-<div class="surface-container p-8 rounded-xl border-l-4 border-primary/40 hover:bg-surface-bright transition-colors group">
-<div class="flex justify-between items-start mb-4">
-<span class="material-symbols-outlined text-primary text-4xl" data-icon="database">database</span>
-<span class="text-xs font-label text-on-surface-variant font-bold tracking-widest uppercase">Storage</span>
-</div>
-<h3 class="text-2xl font-headline font-bold mb-3">Data Engineering &amp; SQL</h3>
-<p class="text-on-surface-variant leading-relaxed mb-6">Experienced with Postgres databases and SQL queries for data extraction.</p>
-<div class="flex flex-wrap gap-2">
-<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">Postgres</span>
-<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">SQL</span>
-<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">Pandas</span>
-</div>
-</div>
-</div>
-<!-- Column 2 -->
-<div class="space-y-6 md:mt-12">
-<div class="surface-container p-8 rounded-xl border-l-4 border-primary/40 hover:bg-surface-bright transition-colors group">
-<div class="flex justify-between items-start mb-4">
-<span class="material-symbols-outlined text-primary text-4xl" data-icon="neurology">neurology</span>
-<span class="text-xs font-label text-on-surface-variant font-bold tracking-widest uppercase">AI</span>
-</div>
-<h3 class="text-2xl font-headline font-bold mb-3">Large Language Models</h3>
-<p class="text-on-surface-variant leading-relaxed mb-6">Application of LLMs to automate NLP related workflows.</p>
-<div class="flex flex-wrap gap-2">
-<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">LLMs</span>
-<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">Transformers</span>
-</div>
-</div>
-<div class="surface-container p-8 rounded-xl border-l-4 border-primary/40 hover:bg-surface-bright transition-colors group">
-<div class="flex justify-between items-start mb-4">
-<span class="material-symbols-outlined text-primary text-4xl" data-icon="bar_chart">bar_chart</span>
-<span class="text-xs font-label text-on-surface-variant font-bold tracking-widest uppercase">Communication</span>
-</div>
-<h3 class="text-2xl font-headline font-bold mb-3">Advanced Visualization</h3>
-<p class="text-on-surface-variant leading-relaxed mb-6">Translating raw metrics into interactive dashboards and executive-level visual storytelling.</p>
-<div class="flex flex-wrap gap-2">
-<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">Tableau</span>
-<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">Plotly</span>
-<span class="bg-surface-container-highest text-on-surface text-xs px-3 py-1 rounded-full border border-outline-variant/30">Power BI</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="max-w-7xl mx-auto px-8 my-40">
-<div class="primary-gradient-bg p-1 rounded-2xl">
-<div class="bg-background rounded-[calc(1rem-2px)] py-24 px-8 text-center relative overflow-hidden">
-<div class="absolute top-0 left-0 w-full h-full bg-primary/5 -z-10"></div>
-<div class="relative z-10">
-<h2 class="font-headline text-6xl font-extrabold tracking-tighter mb-8">Ready to Decode <br/> Your Data?</h2>
-<p class="text-on-surface-variant text-xl max-w-2xl mx-auto mb-12">
-                            Available for high-impact consultancy and applied machine learning projects.
-                        </p>
-<a href="mailto:hbao12@gmail.com"><button class="primary-gradient-bg px-10 py-5 rounded-full text-on-primary-fixed font-headline font-extrabold text-lg shadow-2xl hover:scale-105 transition-transform">
-                            Initiate Contact
-</button></a>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full py-16 mt-32 bg-zinc-950 tonal-shift-top bg-zinc-900/30">
-<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-8">
-<div class="text-zinc-500 font-['Inter'] text-sm tracking-wide">
-                © 2026 Hai Bao - Data Science Enthusiast
+
+<!-- About Section -->
+<section class="py-32 relative">
+<div class="max-w-screen-2xl mx-auto px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div>
+            <p class="text-primary text-sm uppercase tracking-[0.3em] font-bold mb-4">About Me</p>
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 tracking-tight">Turning Data Into Decisions</h2>
+            <p class="text-on-surface-variant text-lg leading-relaxed mb-6">
+                I'm a data scientist with a passion for uncovering hidden patterns and building predictive models that drive real-world impact. My work spans from sports analytics to workforce intelligence.
+            </p>
+            <p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+                With expertise in Python, SQL, and modern visualization tools, I transform complex datasets into clear, actionable stories that help organizations make better decisions.
+            </p>
+            <div class="flex gap-8">
+                <div>
+                    <p class="text-4xl font-bold text-primary">5+</p>
+                    <p class="text-on-surface-variant text-sm uppercase tracking-widest">Projects</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-bold text-primary">3+</p>
+                    <p class="text-on-surface-variant text-sm uppercase tracking-widest">Languages</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-bold text-primary">∞</p>
+                    <p class="text-on-surface-variant text-sm uppercase tracking-widest">Curiosity</p>
+                </div>
             </div>
-<div class="flex gap-12 font-['Inter'] text-sm tracking-wide">
-<a class="text-zinc-500 hover:text-purple-400 transition-colors opacity-80 hover:opacity-100" href="#">LinkedIn</a>
-<a class="text-zinc-500 hover:text-purple-400 transition-colors opacity-80 hover:opacity-100" href="#">GitHub</a>
-<a class="text-zinc-500 hover:text-purple-400 transition-colors opacity-80 hover:opacity-100" href="#">Kaggle</a>
-<a class="text-zinc-500 hover:text-purple-400 transition-colors opacity-80 hover:opacity-100" href="#">Email</a>
+        </div>
+        <div class="relative">
+            <div class="aspect-square rounded-xl overflow-hidden bg-surface-container-low shadow-2xl shadow-black/40">
+                <div class="w-full h-full bg-gradient-to-br from-primary/20 to-tertiary/20 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[120px] text-primary/30">data_exploration</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+</section>
+
+<!-- Skills Section -->
+<section class="py-32 bg-surface-container-low/50">
+<div class="max-w-screen-2xl mx-auto px-8">
+    <div class="text-center mb-16">
+        <p class="text-primary text-sm uppercase tracking-[0.3em] font-bold mb-4">Expertise</p>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight">Skills & Tools</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="skill-card bg-surface-container p-6 rounded-xl text-center transition-all duration-300">
+            <span class="material-symbols-outlined text-4xl text-primary mb-4">code</span>
+            <p class="font-bold text-lg mb-1">Python</p>
+            <p class="text-on-surface-variant text-sm">Pandas, NumPy, Scikit-learn</p>
+        </div>
+        <div class="skill-card bg-surface-container p-6 rounded-xl text-center transition-all duration-300">
+            <span class="material-symbols-outlined text-4xl text-secondary mb-4">storage</span>
+            <p class="font-bold text-lg mb-1">SQL</p>
+            <p class="text-on-surface-variant text-sm">PostgreSQL, Database Design</p>
+        </div>
+        <div class="skill-card bg-surface-container p-6 rounded-xl text-center transition-all duration-300">
+            <span class="material-symbols-outlined text-4xl text-tertiary mb-4">bar_chart</span>
+            <p class="font-bold text-lg mb-1">Power BI</p>
+            <p class="text-on-surface-variant text-sm">Dashboards, Data Modeling</p>
+        </div>
+        <div class="skill-card bg-surface-container p-6 rounded-xl text-center transition-all duration-300">
+            <span class="material-symbols-outlined text-4xl text-primary mb-4">model_training</span>
+            <p class="font-bold text-lg mb-1">Machine Learning</p>
+            <p class="text-on-surface-variant text-sm">Regression, Clustering, A/B Testing</p>
+        </div>
+        <div class="skill-card bg-surface-container p-6 rounded-xl text-center transition-all duration-300">
+            <span class="material-symbols-outlined text-4xl text-secondary mb-4">query_stats</span>
+            <p class="font-bold text-lg mb-1">Statistics</p>
+            <p class="text-on-surface-variant text-sm">Hypothesis Testing, EDA</p>
+        </div>
+        <div class="skill-card bg-surface-container p-6 rounded-xl text-center transition-all duration-300">
+            <span class="material-symbols-outlined text-4xl text-tertiary mb-4">cloud</span>
+            <p class="font-bold text-lg mb-1">AWS</p>
+            <p class="text-on-surface-variant text-sm">S3, Cloud Infrastructure</p>
+        </div>
+        <div class="skill-card bg-surface-container p-6 rounded-xl text-center transition-all duration-300">
+            <span class="material-symbols-outlined text-4xl text-primary mb-4">git</span>
+            <p class="font-bold text-lg mb-1">Git</p>
+            <p class="text-on-surface-variant text-sm">Version Control, Collaboration</p>
+        </div>
+        <div class="skill-card bg-surface-container p-6 rounded-xl text-center transition-all duration-300">
+            <span class="material-symbols-outlined text-4xl text-secondary mb-4">description</span>
+            <p class="font-bold text-lg mb-1">Jupyter</p>
+            <p class="text-on-surface-variant text-sm">Notebooks, Data Analysis</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Featured Projects Section -->
+<section class="py-32">
+<div class="max-w-screen-2xl mx-auto px-8">
+    <div class="flex justify-between items-end mb-16">
+        <div>
+            <p class="text-primary text-sm uppercase tracking-[0.3em] font-bold mb-4">Portfolio</p>
+            <h2 class="text-4xl md:text-5xl font-bold tracking-tight">Featured Projects</h2>
+        </div>
+        <a href="projects.html" class="hidden md:inline-flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-widest hover:text-primary-dim transition-colors">
+            View All Projects
+            <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+    </div>
+
+    <!-- Featured Project: Large -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center mb-16">
+        <div class="md:col-span-7 group">
+            <a href="rc_forecast.html"><div class="relative overflow-hidden rounded-xl aspect-[16/9] bg-surface-container-low shadow-2xl shadow-black/40">
+                <img alt="Rogers Centre Attendance Forecast" class="w-full h-full object-cover transition-all duration-700 scale-105 group-hover:scale-100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Major_League_Baseball_logo.svg/1280px-Major_League_Baseball_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div></a>
+        </div>
+        <div class="md:col-span-5 flex flex-col justify-center">
+            <div class="flex gap-2 mb-6">
+                <span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] tracking-widest uppercase font-bold text-primary">Regression</span>
+                <span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] tracking-widest uppercase font-bold text-primary">XGBoost</span>
+                <span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] tracking-widest uppercase font-bold text-primary">Postgres</span>
+                <span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] tracking-widest uppercase font-bold text-primary">Forecast</span>
+            </div>
+            <a href="rc_forecast.html"><h3 class="text-3xl md:text-4xl font-bold mb-6 tracking-tight">Rogers Centre Attendance Forecast</h3></a>
+            <p class="text-on-surface-variant text-lg mb-8 leading-relaxed font-body">
+                Using data from MLB StatsAPI, we forecast attendance at the Rogers Centre for the 2026 season using data from 2015. Updated daily with actual attendance data.
+            </p>
+            <a href="rc_forecast.html" class="inline-flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-widest hover:text-primary-dim transition-colors">
+                View Project
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Secondary Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="flex flex-col bg-surface-container-low p-8 rounded-xl group hover:bg-surface-container transition-all duration-500">
+            <div class="relative overflow-hidden rounded-lg mb-6 aspect-video">
+                <a href="jobs_postgres.html"><img alt="Job Bank Database" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-all duration-500" src="https://1000logos.net/wp-content/uploads/2020/08/PostgreSQL-Logo.jpg"/></a>
+            </div>
+            <div class="flex gap-2 mb-4">
+                <span class="text-[10px] tracking-widest uppercase font-bold text-secondary">Postgres</span>
+                <span class="text-[10px] tracking-widest uppercase font-bold text-secondary">Python</span>
+                <span class="text-[10px] tracking-widest uppercase font-bold text-secondary">Power BI</span>
+            </div>
+            <a href="jobs_postgres.html"><h3 class="text-2xl font-bold mb-4 tracking-tight">Job Posting Data: Which job skills are in demand?</h3></a>
+            <p class="text-on-surface-variant mb-8 flex-grow leading-relaxed">
+                As a by-product of the job search, I gathered data regarding job postings to find out which skills are in demand for someone who codes in Python.
+            </p>
+            <div class="flex justify-between items-center pt-6 border-t border-white/5">
+                <a href="jobs_postgres.html" class="bg-surface-container-highest px-6 py-3 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-surface-bright transition-colors">View Project</a>
+                <span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors">science</span>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-surface-container-low p-8 rounded-xl group hover:bg-surface-container transition-all duration-500">
+            <div class="relative overflow-hidden rounded-lg mb-6 aspect-video">
+                <a href="walmart.html"><img alt="Walmart Customer Segmentation" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-all duration-500" src="https://cdn.mos.cms.futurecdn.net/5StAbRHLA4ZdyzQZVivm2c.jpg"/></a>
+            </div>
+            <div class="flex gap-2 mb-4">
+                <span class="text-[10px] tracking-widest uppercase font-bold text-tertiary">Pandas</span>
+                <span class="text-[10px] tracking-widest uppercase font-bold text-tertiary">K-Means Clustering</span>
+            </div>
+            <a href="walmart.html"><h3 class="text-2xl font-bold mb-4 tracking-tight">Walmart Customer Segmentation</h3></a>
+            <p class="text-on-surface-variant mb-8 flex-grow leading-relaxed">
+                Using a dataset provided by Walmart of purchase data from an unidentified store, we create different customer profiles based on the customer purchase data.
+            </p>
+            <div class="flex justify-between items-center pt-6 border-t border-white/5">
+                <a href="walmart.html" class="bg-surface-container-highest px-6 py-3 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-surface-bright transition-colors">View Project</a>
+                <span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors">deployed_code</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-12 text-center md:hidden">
+        <a href="projects.html" class="inline-flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-widest hover:text-primary-dim transition-colors">
+            View All Projects
+            <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+    </div>
+</div>
+</section>
+
+<!-- Contact / CTA Section -->
+<section class="py-32 relative overflow-hidden">
+<div class="absolute inset-0 opacity-30">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl"></div>
+</div>
+<div class="max-w-screen-2xl mx-auto px-8 text-center relative z-10">
+    <p class="text-primary text-sm uppercase tracking-[0.3em] font-bold mb-4">Get In Touch</p>
+    <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-8">Let's Work Together</h2>
+    <p class="text-on-surface-variant text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+        Have a project in mind or want to discuss data science opportunities? I'd love to hear from you.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+        <a href="mailto:your.email@example.com" class="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-primary-dim transition-colors">
+            <span class="material-symbols-outlined">mail</span>
+            Send an Email
+        </a>
+        <a href="https://github.com/hbao12" target="_blank" class="inline-flex items-center gap-2 border border-white/10 text-on-surface px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-surface-container transition-colors">
+            <span class="material-symbols-outlined">code</span>
+            GitHub
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="inline-flex items-center gap-2 border border-white/10 text-on-surface px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-surface-container transition-colors">
+            <span class="material-symbols-outlined">work</span>
+            LinkedIn
+        </a>
+    </div>
+</div>
+</section>
+
+<!-- Footer Shell -->
+<footer class="bg-[#131316] full-width py-12 px-8 border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 w-full max-w-screen-2xl mx-auto">
+    <p class="font-['Inter'] text-sm uppercase tracking-widest text-gray-500 text-center md:text-left">
+                &copy; 2026 Hai Bao - Data Science Enthusiast
+            </p>
+    <div class="flex gap-8">
+    <a class="font-['Inter'] text-sm uppercase tracking-widest text-gray-500 hover:text-[#ca98ff] transition-colors" href="https://github.com/hbao12" target="_blank">GitHub</a>
+    <a class="font-['Inter'] text-sm uppercase tracking-widest text-gray-500 hover:text-[#ca98ff] transition-colors" href="#">LinkedIn</a>
+    <a class="font-['Inter'] text-sm uppercase tracking-widest text-gray-500 hover:text-[#ca98ff] transition-colors" href="#">Medium</a>
+    <a class="font-['Inter'] text-sm uppercase tracking-widest text-gray-500 hover:text-[#ca98ff] transition-colors" href="mailto:your.email@example.com">Contact</a>
+    </div>
 </div>
 </footer>
+</main>
 </body></html>
