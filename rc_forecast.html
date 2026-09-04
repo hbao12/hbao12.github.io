@@ -343,16 +343,14 @@ and reduced capacity so that it has become a more social event instead of only b
 <div class="space-y-6 mt-16" id="models">
 <h2 class="text-4xl font-headline font-bold text-on-background">Walkthrough</h2>
 <p class="text-lg text-on-surface-variant">
-                     For a step-by-step walkthrough of the process, you can find my Kaggle notebook
-    <span class="text-primary"><a href="https://www.kaggle.com/code/hbao12/rogers-centre-attendance-forecast">here</a></span>
-        <br><h2 class="text-4xl font-headline font-bold text-on-background">Coming Soon...</h2><br>Migration of this
-    analysis onto Databricks<iframe
-  src="https://dbc-cae1253f-208d.cloud.databricks.com/embed/dashboardsv3/01f19197149510f593fb8a64a2579125?o=7474655543269328"
-  width="100%"
-  height="750"
-  frameborder="0">
-</iframe>
-</p>
+     For a step-by-step walkthrough of the process, you can find my Kaggle notebook
+     <span class="text-primary"><a href="https://www.kaggle.com/code/hbao12/rogers-centre-attendance-forecast">here</a></span>
+ </p>
+ <h2 class="text-4xl font-headline font-bold text-on-background mt-4">Coming Soon...</h2>
+ <p class="text-lg text-on-surface-variant">Migration of this analysis onto Databricks.</p>
+ <div id="dashboard-container" style="min-height: 800px; background: #1a1a24; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; margin-top: 1rem;">
+     <p style="color: #fff; font-family: sans-serif;">Loading Predictive Models Stream...</p>
+ </div>
 
 
 
@@ -378,19 +376,40 @@ and reduced capacity so that it has become a more social event instead of only b
 </nav>
 </div>
 </footer>
-    <script>
-        function openModal(modalId, iframeId) {
-            var m = document.getElementById(modalId);
-            if (iframeId) {
-                var f = document.getElementById(iframeId);
-                if (f && !f.getAttribute('src')) {
-                    f.setAttribute('src', f.getAttribute('data-src'));
+    <script type="module" defer>
+        import { DatabricksDashboard } from 'https://esm.sh/@databricks/aibi-client';
+
+        async function loadDatabricksDashboard() {
+            try {
+                const response = await fetch('https://hbao.ca', {
+                    method: 'GET',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                if (!response.ok) throw new Error('Token generation backend offline.');
+                const data = await response.json();
+
+                const container = document.getElementById('dashboard-container');
+                if (!container) throw new Error('Dashboard container not found.');
+                container.innerHTML = '';
+
+                const dashboard = new DatabricksDashboard({
+                    url: data.dashboard_url,
+                    token: data.token,
+                    container: container,
+                    height: '800px',
+                    width: '100%'
+                });
+
+                await dashboard.render();
+            } catch (error) {
+                console.error('Dashboard initialization error:', error);
+                const container = document.getElementById('dashboard-container');
+                if (container) {
+                    container.innerHTML = '<p style="color:red;">Unable to load predictive analytics framework stream.</p>';
                 }
             }
-            m.classList.add('open');
         }
-        function closeModal(modalId) {
-            document.getElementById(modalId).classList.remove('open');
-        }
+        loadDatabricksDashboard();
     </script>
-</body></html>
+</body>
+</html>
