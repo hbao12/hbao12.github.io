@@ -145,6 +145,27 @@
             background: #25252a;
             color: #ca98ff;
         }
+        #image-fullscreen {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background: rgba(14, 14, 17, 0.95);
+            backdrop-filter: blur(8px);
+            display: none;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: center;
+            padding: 0;
+        }
+        #image-fullscreen.open {
+            display: flex;
+        }
+        #image-fullscreen-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border: 0;
+        }
     </style>
 </head>
 <body class="font-body selection:bg-primary selection:text-on-primary">
@@ -257,6 +278,15 @@
     function closeForecast() {
         document.getElementById('rc-fullscreen').classList.remove('open');
     }
+    function openImage() {
+        var fs = document.getElementById('image-fullscreen');
+        var img = document.getElementById('image-fullscreen-img');
+        fs.classList.add('open');
+        img.src = img.getAttribute('data-src') || img.src;
+    }
+    function closeImage() {
+        document.getElementById('image-fullscreen').classList.remove('open');
+    }
 </script>
 <div class="mt-8 max-w-xl text-center">
 <p class="text-sm text-on-surface-variant leading-relaxed">
@@ -284,6 +314,27 @@
     rankings due to non-disclosures. The figures have been normalized through tco2e/vehicle since brands like VW are
     extremely high volume manufacturers (approx 9 million vehicles), whereas Porsche only produces approx 300k vehicles a year.
 </p>
+    <h2 class="text-4xl font-headline font-bold text-on-background">Databricks</h2>
+<p class="text-lg text-on-surface-variant">Implementation of Medallion architecture
+</p>
+        <!-- Technical Diagram Section -->
+<div class="my-20 bg-surface-container-low rounded-2xl border border-white/5 overflow-hidden shadow-2xl" id="results">
+<div class="overflow-x-auto">
+    <div class="rc-forecast-wrap" onclick="openImage()">
+        <img title="databricks" style="display:block; width: 100%; height: 440px; object-fit: contain; border: 0; background: #19191d; cursor: pointer" src="https://rs3-bucket-721529235014-ca-central-1-an.s3.ca-central-1.amazonaws.com/databricks.png" alt="Databricks"/>
+    </div>
+</div>
+<div class="mt-8 max-w-xl text-center">
+<p class="text-sm text-on-surface-variant leading-relaxed">
+<span class="font-bold text-primary mr-2 uppercase tracking-widest text-[10px]">Fig 1.2:</span>
+            Databricks architecture.<br>Click image for fullscreen view.
+        </p>
+</div>
+</div>
+<div id="image-fullscreen" style="position:fixed; inset:0; z-index:100; background:rgba(14,14,17,0.95); backdrop-filter:blur(8px); flex-direction:column; align-items:stretch; justify-content:center; padding:0;">
+    <button id="image-close" onclick="closeImage()" style="position:absolute; top:1.5rem; right:1.5rem; background:#1f1f23; color:#f0edf1; border:1px solid #48474b; border-radius:9999px; width:2.75rem; height:2.75rem; font-size:1.5rem; cursor:pointer; line-height:1;">&times;</button>
+    <img id="image-fullscreen-img" data-src="https://rs3-bucket-721529235014-ca-central-1-an.s3.ca-central-1.amazonaws.com/databricks.png" src="" style="width:100%; height:100%; object-fit:contain; border:0;"/>
+</div>
 </div>
 </div>
 </div>
@@ -298,12 +349,7 @@
         <li>Databricks for ETL using Medallion architecture</li>
         <li>Power BI for final dashboard deliverable</li>
         </p>
-    <!-- Technical Diagram Section -->
-<div class="my-20 bg-surface-container-low rounded-2xl border border-white/5 overflow-hidden shadow-2xl" id="results">
-<div class="overflow-x-auto">
 
-</div>
-</div>
 </div>
 
 
