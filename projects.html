@@ -1,223 +1,190 @@
 <!DOCTYPE html>
 
 <html class="dark" lang="en"><head>
-    <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Projects | Hai Bao</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "primary-fixed": "#c185ff",
-                    "on-secondary-fixed": "#540f72",
-                    "on-background": "#f0edf1",
-                    "secondary-container": "#692886",
-                    "outline-variant": "#48474b",
-                    "surface-dim": "#0e0e11",
-                    "tertiary": "#ff8b9a",
-                    "primary-container": "#c185ff",
-                    "inverse-surface": "#fcf8fd",
-                    "surface-container-lowest": "#000000",
-                    "tertiary-dim": "#f47788",
-                    "on-error-container": "#ffb2b9",
-                    "secondary-dim": "#d18aee",
-                    "surface-container": "#19191d",
-                    "background": "#0e0e11",
-                    "on-surface": "#f0edf1",
-                    "surface-container-low": "#131316",
-                    "inverse-on-surface": "#555458",
-                    "error-dim": "#d73357",
-                    "secondary-fixed": "#f0c1ff",
-                    "surface-variant": "#25252a",
-                    "on-primary-fixed": "#000000",
-                    "on-tertiary-container": "#4d0015",
-                    "on-secondary": "#520c70",
-                    "surface": "#0e0e11",
-                    "error-container": "#a70138",
-                    "primary-dim": "#9c42f4",
-                    "on-tertiary-fixed-variant": "#711229",
-                    "on-primary-fixed-variant": "#420078",
-                    "on-surface-variant": "#acaaae",
-                    "surface-tint": "#ca98ff",
-                    "on-secondary-fixed-variant": "#743391",
-                    "surface-container-high": "#1f1f23",
-                    "secondary": "#e097fd",
-                    "primary": "#ca98ff",
-                    "secondary-fixed-dim": "#e9aeff",
-                    "tertiary-fixed": "#ff909e",
-                    "on-tertiary": "#62041f",
-                    "on-tertiary-fixed": "#39000e",
-                    "on-error": "#490013",
-                    "tertiary-container": "#f7798b",
-                    "on-secondary-container": "#efc0ff",
-                    "error": "#ff6e84",
-                    "surface-container-highest": "#25252a",
-                    "outline": "#767579",
-                    "tertiary-fixed-dim": "#fa7c8d",
-                    "on-primary-container": "#350062",
-                    "inverse-primary": "#8523dd",
-                    "primary-fixed-dim": "#b772ff",
-                    "surface-bright": "#2c2c30",
-                    "on-primary": "#46007d"
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-container": "#f7798b",
+                      "error-dim": "#d73357",
+                      "surface-variant": "#25252a",
+                      "outline-variant": "#48474b",
+                      "error-container": "#a70138",
+                      "on-surface-variant": "#acaaae",
+                      "secondary-dim": "#d18aee",
+                      "surface-container-low": "#131316",
+                      "surface-container-high": "#1f1f23",
+                      "tertiary-dim": "#f47788",
+                      "surface-bright": "#2c2c30",
+                      "surface": "#0e0e11",
+                      "on-primary-fixed-variant": "#420078",
+                      "tertiary-fixed": "#ff909e",
+                      "on-background": "#f0edf1",
+                      "outline": "#767579",
+                      "on-secondary-fixed": "#540f72",
+                      "on-secondary-fixed-variant": "#743391",
+                      "on-secondary": "#520c70",
+                      "secondary-fixed": "#f0c1ff",
+                      "secondary-container": "#692886",
+                      "primary-fixed": "#c185ff",
+                      "on-error-container": "#ffb2b9",
+                      "on-tertiary-fixed-variant": "#711229",
+                      "on-primary-container": "#350062",
+                      "surface-container-lowest": "#000000",
+                      "on-error": "#490013",
+                      "surface-container": "#19191d",
+                      "background": "#0e0e11",
+                      "inverse-surface": "#fcf8fd",
+                      "inverse-primary": "#8523dd",
+                      "surface-dim": "#0e0e11",
+                      "primary-fixed-dim": "#b772ff",
+                      "error": "#ff6e84",
+                      "tertiary": "#ff8b9a",
+                      "surface-tint": "#ca98ff",
+                      "primary": "#ca98ff",
+                      "primary-container": "#c185ff",
+                      "on-primary-fixed": "#000000",
+                      "on-surface": "#f0edf1",
+                      "secondary-fixed-dim": "#e9aeff",
+                      "secondary": "#e097fd",
+                      "on-primary": "#46007d",
+                      "surface-container-highest": "#25252a",
+                      "on-secondary-container": "#efc0ff",
+                      "tertiary-fixed-dim": "#fa7c8d",
+                      "on-tertiary": "#62041f",
+                      "on-tertiary-fixed": "#39000e",
+                      "primary-dim": "#9c42f4",
+                      "on-tertiary-container": "#4d0015",
+                      "inverse-on-surface": "#555458"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "display": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
             },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "fontFamily": {
-                    "headline": ["Manrope"],
-                    "body": ["Inter"],
-                    "label": ["Inter"]
-            }
           },
-        },
-      }
+        }
     </script>
 <style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        .glass-card {
+        body {
+            background-color: #0e0e11;
+            color: #f0edf1;
+        }
+        .editorial-gradient {
+            background: linear-gradient(135deg, #ca98ff 0%, #8A2BE2 100%);
+        }
+        .glass-panel {
             background: rgba(25, 25, 29, 0.6);
             backdrop-filter: blur(20px);
         }
     </style>
 </head>
-<body class="bg-background text-on-surface selection:bg-primary selection:text-on-primary">
-<!-- TopAppBar Shell -->
-<header class="bg-[#0e0e11]/80 backdrop-blur-lg docked full-width top-0 z-50 bg-gradient-to-b from-[#131316] to-transparent shadow-2xl shadow-purple-900/20">
-<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
-<a href="/"><div class="text-2xl font-black tracking-tighter text-white dark:text-[#f0edf1]">Data Science Enthusiast</div></a>
-<nav class="hidden md:flex items-center space-x-8 font-['Manrope'] tracking-tight">
-    <a class="text-[#f0edf1]/60 hover:text-[#f0edf1] transition-colors" href="index.html">Home</a>
-<a class="text-[#8A2BE2] font-bold border-b-2 border-[#8A2BE2] pb-1" href="projects.html">Projects</a>
-<a class="text-[#f0edf1]/60 hover:text-[#f0edf1] transition-colors" href="resume.pdf">Resume</a>
+<body class="font-body selection:bg-primary selection:text-on-primary">
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e11]/60 backdrop-blur-xl shadow-2xl shadow-purple-900/10">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<span class="text-xl font-bold tracking-tighter text-white font-manrope">Data Science Enthusiast</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#f0edf1]/60 font-medium hover:text-[#ca98ff] hover:bg-[#1f1f23]/50 transition-all duration-300 px-2 py-1" href="index.html">Home</a>
+<a class="text-[#ca98ff] font-medium bg-[#1f1f23]/50 transition-all duration-300 px-2 py-1" href="projects.html">Projects</a>
+<a class="text-[#f0edf1]/60 font-medium hover:text-[#ca98ff] hover:bg-[#1f1f23]/50 transition-all duration-300 px-2 py-1" href="resume.pdf">Resume</a>
+</div>
+<div class="flex items-center gap-6">
+<a href="mailto:hbao12@gmail.com"><button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-bold editorial-gradient hover:scale-105 transition-transform">
+                    Contact Me
+    </button></a>
+</div>
+</div>
 </nav>
-<div class="flex items-center gap-4">
-
-</div>
-</div>
-</header>
-<main class="min-h-screen pt-32 pb-20">
-<!-- Hero Section -->
-<section class="max-w-screen-2xl mx-auto px-8 mb-32">
+<main class="pt-32">
+<section class="max-w-7xl mx-auto px-8 mb-24">
 <div class="max-w-4xl">
-<h1 class="text-7xl md:text-8xl font-extrabold tracking-tighter leading-none mb-8">
+<div class="flex items-center gap-4 text-primary font-medium tracking-widest text-xs uppercase mb-8">
+<span>Portfolio</span>
+<span class="w-8 h-px bg-primary/30"></span>
+<span>2 Projects</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-extrabold font-headline leading-[1.1] tracking-tighter text-on-background mb-8">
                     Projects
-</h1>
+                </h1>
 <p class="text-xl text-on-surface-variant font-light max-w-2xl leading-relaxed">
                     A curation of data science initiatives
                 </p>
 </div>
 </section>
-<!-- Bento Grid Projects Gallery -->
-<section class="max-w-screen-2xl mx-auto px-8 space-y-32">
-<!-- Blue Jays Cards -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-<!-- Card: Blue Jays Attendance Forecast -->
-  <div class="flex flex-col bg-surface-container-low p-8 rounded-xl group hover:bg-surface-container transition-all duration-500">
-    <div class="relative overflow-hidden rounded-lg mb-8 aspect-video">
-        <a href="https://hbao.ca/Rogers%20Centre%20Stadium%20Data.html"><img alt="Blue Jays Attendance Forecast" class="w-full h-full object-contain opacity-60 group-hover:opacity-100 transition-all duration-500" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Rogers_Centre_%28500_Level%29_-_Toronto%2C_ON.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original"/></a>
-    </div>
-    <div class="flex gap-2 mb-4">
-      <span class="text-[10px] tracking-widest uppercase font-bold text-primary">Regression</span>
-      <span class="text-[10px] tracking-widest uppercase font-bold text-primary">XGBoost</span>
-      <span class="text-[10px] tracking-widest uppercase font-bold text-primary">Databricks</span>
-      <span class="text-[10px] tracking-widest uppercase font-bold text-primary">Forecast</span>
-        <span class="text-[10px] tracking-widest uppercase font-bold text-primary">Time Series</span>
-    </div>
-      <a href="https://hbao.ca/Rogers%20Centre%20Stadium%20Data.html"><h3 class="text-3xl font-bold mb-4 tracking-tight">Forecasting 2026 Blue Jays Attendance: A Data-Driven Approach Using MLB StatsAPI</h3></a>
-    <p class="text-on-surface-variant mb-8 flex-grow leading-relaxed">
-      How many Blue Jays fans will pack the stadium this year? By analyzing a comprehensive dataset spanning 2015 to 2025 via the MLB StatsAPI, this study forecasts game-by-game attendance for the 2026 Blue Jays season to help optimize stadium operations and marketing strategies.
-    </p>
-    <div class="flex justify-between items-center pt-8 border-t border-white/5">
-        <a href="https://hbao.ca/Rogers%20Centre%20Stadium%20Data.html"><button class="bg-surface-container-highest px-6 py-3 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-surface-bright transition-colors">View Project</button></a>
-      <span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors" data-icon="arrow_forward">arrow_forward</span>
-    </div>
-  </div>
-<!-- Card: Loonie Dogs DiD Analysis -->
-  <div class="flex flex-col bg-surface-container-low p-8 rounded-xl group hover:bg-surface-container transition-all duration-500">
-    <div class="relative overflow-hidden rounded-lg mb-8 aspect-video">
-        <a href="https://hbao.ca/Loonie%20Dogs%20Attendance%20DiD%20Analysis.html"><img alt="Loonie Dogs Attendance DiD Analysis" class="w-full h-full object-contain opacity-60 group-hover:opacity-100 transition-all duration-500" src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1536/mlb/hpuimxig1mwdbpuzkicn.png"/></a>
-    </div>
-    <div class="flex gap-2 mb-4">
-      <span class="text-[10px] tracking-widest uppercase font-bold text-tertiary">DiD</span>
-      <span class="text-[10px] tracking-widest uppercase font-bold text-tertiary">Causal Inference</span>
-      <span class="text-[10px] tracking-widest uppercase font-bold text-tertiary">Python</span>
-        <span class="text-[10px] tracking-widest uppercase font-bold text-tertiary">Databricks</span>
-    </div>
-      <a href="https://hbao.ca/Loonie%20Dogs%20Attendance%20DiD%20Analysis.html"><h3 class="text-3xl font-bold mb-4 tracking-tight">Do 'Loonie Dogs' Nights Actually Drive Attendance? A Difference-in-Differences Causal Analysis</h3></a>
-    <p class="text-on-surface-variant mb-8 flex-grow leading-relaxed">
-      This study applies a Difference-in-Differences (DiD) framework to estimate the true causal impact of "Loonie Dogs" promotions on game-day attendance for the Blue Jays. By comparing attendance trends on promotion days (the treatment group) against a comparable control group of non-promotional games, this analysis isolates the structural lift in ticket sales from confounding variables like seasonal demand and day-of-the-week effects.
-    </p>
-    <div class="flex justify-between items-center pt-8 border-t border-white/5">
-        <a href="https://hbao.ca/Loonie%20Dogs%20Attendance%20DiD%20Analysis.html"><button class="bg-surface-container-highest px-6 py-3 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-surface-bright transition-colors">View Project</button></a>
-      <span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors">science</span>
-    </div>
-  </div>
-<!-- Card: A/B Test Bobblehead -->
-  <div class="flex flex-col bg-surface-container-low p-8 rounded-xl group hover:bg-surface-container transition-all duration-500">
-    <div class="relative overflow-hidden rounded-lg mb-8 aspect-video">
-        <a href="https://hbao.ca/MLB%20Bobblehead%20AB%20Test%20Analysis"><img alt="Neural Architecture Viz" class="w-full h-full object-contain opacity-60 group-hover:opacity-100 transition-all duration-500" data-alt="Conceptual 3D wireframe of a complex neural network with glowing purple connections and dark architectural geometry" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDLomcatdEY5mg4FTLMxSxUtVpop6Embjgjx7oQ_RfVbQAq7eYG-c4fic&s=10"/></a>
-    </div>
-    <div class="flex gap-2 mb-4">
-      <span class="text-[10px] tracking-widest uppercase font-bold text-secondary">A/B Testing</span>
-      <span class="text-[10px] tracking-widest uppercase font-bold text-secondary">Python</span>
-      <span class="text-[10px] tracking-widest uppercase font-bold text-secondary">Stats</span>
-      <span class="text-[10px] tracking-widest uppercase font-bold text-secondary">Databricks</span>
-    </div>
-      <a href="https://hbao.ca/MLB%20Bobblehead%20AB%20Test%20Analysis"><h3 class="text-3xl font-bold mb-4 tracking-tight">A/B Testing the 'Bobblehead Effect' on Blue Jays Attendance</h3></a>
-    <p class="text-on-surface-variant mb-8 flex-grow leading-relaxed">
-      Utilizing historical game-level data, this study applies A/B testing methodologies using Python to quantify the impact of bobblehead promotions. The analysis evaluates whether these giveaway events generate a statistically significant increase in Blue Jays attendance, providing data-driven insights into the efficacy of the team's promotional budget.
-                    </p>
-    <div class="flex justify-between items-center pt-8 border-t border-white/5">
-        <a href="https://hbao.ca/MLB%20Bobblehead%20AB%20Test%20Analysis"><button class="bg-surface-container-highest px-6 py-3 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-surface-bright transition-colors">View Project</button></a>
-      <span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors" data-icon="code">code</span>
-    </div>
-  </div>
-<!-- Card 3: MLB Cluster Analysis -->
+<section class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-12 mb-32">
 <div class="flex flex-col bg-surface-container-low p-8 rounded-xl group hover:bg-surface-container transition-all duration-500">
 <div class="relative overflow-hidden rounded-lg mb-8 aspect-video">
-    <a href="MLB_Cluster_Analysis_Tier_Pricing.html"><img alt="MLB Cluster Analysis" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-all duration-500" data-alt="Heatmap visualization of a futuristic urban city grid with neon pink and purple hotspots indicating data density" src="https://smartcdn.gprod.postmedia.digital/v1/dynamic_resize/sws_path/suns-prod-images/1297738237242_ORIGINAL.jpg"/></a>
+<a href="https://rs3-bucket-721529235014-ca-central-1-an.s3.ca-central-1.amazonaws.com/salary_dashboard.html"><img alt="Canadian Job Data" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-all duration-500" src="https://1000logos.net/wp-content/uploads/2020/08/PostgreSQL-Logo.jpg"/></a>
 </div>
 <div class="flex gap-2 mb-4">
-<span class="text-[10px] tracking-widest uppercase font-bold text-tertiary">Pandas</span>
-<span class="text-[10px] tracking-widest uppercase font-bold text-tertiary">K-Means Clustering</span>
+<span class="text-[10px] tracking-widest uppercase font-bold text-secondary">Postgres</span>
+<span class="text-[10px] tracking-widest uppercase font-bold text-secondary">Python</span>
+<span class="text-[10px] tracking-widest uppercase font-bold text-secondary">Dashboard</span>
 </div>
-    <a href="MLB_Cluster_Analysis_Tier_Pricing.html"><h3 class="text-3xl font-bold mb-4 tracking-tight">Blue Jays Fan Demand & Event Segmentation: A K-Means Clustering Approach</h3></a>
+<a href="https://rs3-bucket-721529235014-ca-central-1-an.s3.ca-central-1.amazonaws.com/salary_dashboard.html"><h3 class="text-3xl font-bold mb-4 tracking-tight">Canadian Salary Data</h3></a>
 <p class="text-on-surface-variant mb-8 flex-grow leading-relaxed">
-                This project applies K-Means clustering to historical Toronto Blue Jays data to segment and profile game-day dynamics at the Rogers Centre. By grouping games based on multivariate features—including attendance metrics, opponent profiles, stadium capacity, and promotional schedules—this analysis uncovers distinct operational clusters that help optimize ticketing strategies and fan engagement campaigns.
+                Report analyzing Canadian job posting salaries. It queries a PostgreSQL database for postings with pay data,
+                then visualizes median compensation across role families, seniority levels, industries, and canonical roles.
+                The dashboard includes KPI cards (market median, pay coverage, management premium), auto-generated takeaways,
+                bar/line charts, a role × seniority benchmark matrix, and detailed statistical tables.
+                Output is uploaded to S3.
             </p>
 <div class="flex justify-between items-center pt-8 border-t border-white/5">
-    <a href="MLB_Cluster_Analysis_Tier_Pricing.html"><button class="bg-surface-container-highest px-6 py-3 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-surface-bright transition-colors">View Project</button></a>
-<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors" data-icon="deployed_code">deployed_code</span>
+<a href="https://rs3-bucket-721529235014-ca-central-1-an.s3.ca-central-1.amazonaws.com/salary_dashboard.html"><button class="bg-surface-container-highest px-6 py-3 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-surface-bright transition-colors">View Project</button></a>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors">science</span>
 </div>
 </div>
+<div class="flex flex-col bg-surface-container-low p-8 rounded-xl group hover:bg-surface-container transition-all duration-500">
+<div class="relative overflow-hidden rounded-lg mb-8 aspect-video">
+<a href="blue_jays.html"><img alt="Blue Jays Attendance Analytics" class="w-full h-full object-contain opacity-60 group-hover:opacity-100 transition-all duration-500" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Rogers_Centre_%28500_Level%29_-_Toronto%2C_ON.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original"/></a>
+</div>
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] tracking-widest uppercase font-bold text-primary">Regression</span>
+<span class="text-[10px] tracking-widest uppercase font-bold text-primary">XGBoost</span>
+<span class="text-[10px] tracking-widest uppercase font-bold text-primary">Databricks</span>
+<span class="text-[10px] tracking-widest uppercase font-bold text-primary">Forecast</span>
+<span class="text-[10px] tracking-widest uppercase font-bold text-primary">Time Series</span>
+</div>
+<a href="blue_jays.html"><h3 class="text-3xl font-bold mb-4 tracking-tight">Blue Jays Attendance Analytics</h3></a>
+<p class="text-on-surface-variant mb-8 flex-grow leading-relaxed">
+                A comprehensive dataset spanning 2015–2025 of game-level Blue Jays data sourced from the MLB StatsAPI, including attendance figures, opponent profiles, stadium capacity, promotional schedules, and day-of-the-week effects. Projects built on this dataset include: forecasting 2026 game-by-game attendance using XGBoost regression; a Difference-in-Differences causal analysis of "Loonie Dogs" promotion nights; an A/B testing study of bobblehead giveaway impact; and a K-Means clustering segmentation of game-day dynamics for ticketing strategy optimization.
+            </p>
+<div class="flex justify-between items-center pt-8 border-t border-white/5">
+<a href="https://hbao.ca/Rogers%20Centre%20Stadium%20Data.html"><button class="bg-surface-container-highest px-6 py-3 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-surface-bright transition-colors">View Project</button></a>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors">arrow_forward</span>
 </div>
 </div>
 </section>
-<footer class="bg-[#131316] full-width py-12 px-8 mt-32 border-t border-white/5">
-<div class="flex flex-col md:flex-row justify-between items-center gap-8 w-full max-w-screen-2xl mx-auto">
-<p class="font-['Inter'] text-sm uppercase tracking-widest text-gray-500 text-center md:text-left">
-                © 2026 Hai Bao - Data Science Enthusiast
-            </p>
-<div class="flex gap-8">
-<a class="font-['Inter'] text-sm uppercase tracking-widest text-gray-500 hover:text-[#ca98ff] transition-colors" href="#">GitHub</a>
-<a class="font-['Inter'] text-sm uppercase tracking-widest text-gray-500 hover:text-[#ca98ff] transition-colors" href="#">LinkedIn</a>
-<a class="font-['Inter'] text-sm uppercase tracking-widest text-gray-500 hover:text-[#ca98ff] transition-colors" href="#">Medium</a>
-<a class="font-['Inter'] text-sm uppercase tracking-widest text-gray-500 hover:text-[#ca98ff] transition-colors" href="#">Contact</a>
+<footer class="w-full py-16 mt-32 border-t border-white/5 bg-[#0e0e11]">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-8 max-w-7xl mx-auto gap-8">
+<div class="space-y-4">
+<span class="font-manrope font-bold text-lg text-white">Data Science Enthusiast</span>
+<p class="text-[#f0edf1]/40 font-inter text-sm tracking-wide max-w-sm">© 2026 Hai Bao</p>
 </div>
+<nav class="flex gap-8">
+<a class="text-[#f0edf1]/40 hover:text-[#ca98ff] transition-colors duration-200 font-inter text-sm tracking-wide" href="https://github.com/hbao12" target="_blank">GitHub</a>
+<a class="text-[#f0edf1]/40 hover:text-[#ca98ff] transition-colors duration-200 font-inter text-sm tracking-wide" href="https://linkedin.com" target="_blank">LinkedIn</a>
+<a class="text-[#f0edf1]/40 hover:text-[#ca98ff] transition-colors duration-200 font-inter text-sm tracking-wide" href="mailto:hbao12@gmail.com">Contact</a>
+</nav>
 </div>
 </footer>
 </main>
